@@ -21,7 +21,7 @@ function WeatherContainer() {
                     <h3>Sunset</h3>
                     <p>15:55</p>
                 </div>
-                <span className="verticalBar"></span>
+                <span className="verticalBar" />
                 <div className="sunPosition">
                     <h3>Sunrise</h3>
                     <p>9:40</p>
