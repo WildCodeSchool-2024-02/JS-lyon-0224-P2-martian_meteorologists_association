@@ -1,3 +1,4 @@
+import "./AdditionalInformation1.css";
 import FunFacts from "../../BDD/FunFacts";
 
 function AdditionalInformation() {
@@ -6,7 +7,7 @@ function AdditionalInformation() {
   return (
     <div className="informationContainer">
       <div className="menu">
-        <ul>
+        <ul className="menulist">
           <li className="menuicon">
             <img src="src/assets/images/rocketman_cloth.svg" alt="cloth" />
           </li>
@@ -20,8 +21,8 @@ function AdditionalInformation() {
       </div>
 
       <div className="textContainer">
-        <h3>Did you know?</h3>
-        <p>{FunFacts[randomIndex]}</p>
+        <h3 className="additionalh3">Did you know?</h3>
+        <p className="additionalp">{FunFacts[randomIndex]}</p>
       </div>
     </div>
   );
