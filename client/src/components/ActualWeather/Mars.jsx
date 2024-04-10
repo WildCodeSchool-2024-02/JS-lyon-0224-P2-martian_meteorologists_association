@@ -19,7 +19,6 @@ export default function Model(props) {
         geometry={nodes.Object_2.geometry}
         material={materials["Material.001"]}
         rotation={[-Math.PI / 2, 0, 0]}
-        scale={[1.5, 1.5, 1.5]}
       />
     </group>
   );

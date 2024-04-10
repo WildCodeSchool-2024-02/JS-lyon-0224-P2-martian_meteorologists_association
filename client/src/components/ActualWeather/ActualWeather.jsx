@@ -22,19 +22,20 @@ function ActualWeather({ currentTemperature }) {
         </div>
         <p>{temperatureMars}°C</p>
       </div>
-
-      <Canvas>
-        <ambientLight intensity={1.8} color="#ffffff" />
-        <OrbitControls
-          enableZoom={false}
-          autoRotate
-          enablePan={false}
-          enableRotate={false}
-        />
-        <Suspense fallback={null}>
-          <Mars position={[0, -1, 0]} />
-        </Suspense>
-      </Canvas>
+      <div className="mars">
+        <Canvas>
+          <ambientLight intensity={1.8} color="#ffffff" />
+          <OrbitControls
+            enableZoom={false}
+            autoRotate
+            enablePan={false}
+            enableRotate={false}
+          />
+          <Suspense fallback={null}>
+            <Mars position={[0, -4, 0]} scale={3} />
+          </Suspense>
+        </Canvas>
+      </div>
 
       {/* <Canvas>
         <ambientLight />
