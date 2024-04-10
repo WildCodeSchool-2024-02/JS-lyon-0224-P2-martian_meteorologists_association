@@ -1,6 +1,6 @@
 import "./App.css";
+import { useState } from "react";
 import WeatherComponent from "./API/Api";
-import React, { useState, useEffect } from 'react';
 import AddtionalInformation from "./components/AdditionalInformation/AdditionalInformation";
 
 function App() {
@@ -11,7 +11,6 @@ function App() {
     {weatherData ? (
         <div>
           <AddtionalInformation />
-          <p></p>
         </div>
       ) : (
         <p>Loading...</p>
