@@ -38,7 +38,7 @@ h3 {
 
 
 /* //////////////////Media Queries////////////// */
-@media only screen and (min-width: 430px) {
+@media only screen and (min-width: 431px) {
     .menuicon > img {
         width: 60px; 
     }
