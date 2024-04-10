@@ -1,7 +1,12 @@
 import App from "../../App";
 import "./AdditionalInformation.css"
+import FunFacts from "../../BDD/FunFacts";
 
 function AddtionalInformation() {
+    let RandomIndex = Math.floor(Math.random() * FunFacts.length);
+    console.log(RandomIndex);
+    console.log(FunFacts[0])
+
     return <>
         <div className="informationContainer">
             <div className="menu">
@@ -14,7 +19,7 @@ function AddtionalInformation() {
     
             <div className="textContainer">
                 <h3>Did you know ?</h3>
-                <p>Mars has 2 moons called Deimos and Phobos. They are named after the two horses that pull the Roman god of war, Mars’, chariot. They may be asteroids captured by Mars’ gravity.</p>
+                <p>{FunFacts[RandomIndex]}</p>
             </div>
         
         </div>
