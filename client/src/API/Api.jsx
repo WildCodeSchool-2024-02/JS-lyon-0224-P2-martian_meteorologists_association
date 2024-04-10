@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const WeatherComponent = ({ weatherData, setWeatherData }) => {
-  // const [weatherData, setWeatherData] = useState(null);
+const WeatherComponent = ({ setWeatherData }) => {
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,15 +18,6 @@ const WeatherComponent = ({ weatherData, setWeatherData }) => {
 
   return (
     <>
-      {/* {weatherData ? (
-        <div>
-          <h2>Weather Data</h2>
-        <pre>{JSON.stringify(weatherData, null, 2)}</pre>
-        <h2>cloud : {weatherData.current_units.temperature_2m }</h2>
-        </div>
-      ) : (
-        <p>Loading...</p>
-      )} */}
     </>
   );
 };

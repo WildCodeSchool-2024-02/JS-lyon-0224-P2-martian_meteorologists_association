@@ -7,10 +7,11 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   return (
     <>
-     <WeatherComponent weatherData={weatherData} setWeatherData={setWeatherData} />
+     <WeatherComponent setWeatherData={setWeatherData} />
     {weatherData ? (
         <div>
           <AddtionalInformation />
+          <p></p>
         </div>
       ) : (
         <p>Loading...</p>

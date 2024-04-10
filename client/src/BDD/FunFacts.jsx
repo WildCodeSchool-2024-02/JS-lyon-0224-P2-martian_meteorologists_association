@@ -1,0 +1,22 @@
+const FunFacts = {
+    "fact1": "Mars is also known as the Red Planet. This is because Mars is covered in soil, rock, and dust made from iron oxide which gives the surface a red rusty colour.",
+    "fact2": "Mars is named after the Roman god of war.",
+    "fact3": "Mars has 2 moons called Deimos and Phobos. They are named after the two horses that pull the Roman god of war, Mars’, chariot. They may be asteroids captured by Mars’ gravity.",
+    "fact4": "Mars is the 4th planet from the sun. It is 227,936,637 km (141 million miles) away from the sun. It would take 300 days (around 8 months) to get there from Earth.",
+    "fact5": "Mars is smaller than Earth with a diameter of 4217 miles. This makes it the second smallest planet in our solar system.",
+    "fact6": "A day on Mars lasts 24 hours and 37 minutes.",
+    "fact7": "One year on Mars is 687 days long. That’s 1.9 Earth years. This is because Mars is further away from the sun so it takes longer to orbit it.",
+    "fact8": "The tilt on the axis of Mars is 25 degrees which means that the planet experiences seasons like we do on Earth as different parts of the planet are closer to the sun at different times of its orbit.",
+    "fact9": "Mars has a thin atmosphere made from 95.9% carbon dioxide and 2.7% nitrogen. The atmosphere is so thin that it’s not thick enough to trap the sun’s heat so it is very cold - ranging from -100℃ in winter to 20℃ in summer.",
+    "fact10": "Mars has very weak gravity. Gravity on Mars is 37% less than on Earth. This means that on Mars you could jump 3x higher than on Earth.",
+    "fact11": "Mars is a terrestrial planet because it has a hard and rocky surface. Its northern side is full of flat plains and the southern side has ridges and craters.",
+    "fact12": "Mars’ surface has many channels, plains, and canyons which could have been caused by water erosion (water wearing away the surface). This could be evidence that open water in liquid form once existed on the surface billions of years ago.",
+    "fact13": "Mars experiences violent dust storms powered by the sun which can last for months. The dust storms can completely cover the planet and continually change Mars’ surface.",
+    "fact14": "Mars is home to Olympus Mons, a dormant volcano and the largest volcano and highest mountain in our solar system. It is 16 miles high and 600 km across the base, making it 3x the height of Mount Everest.",
+    "fact15": "The biggest crater on Mars is Borealis Basin. It is 5300 miles from end to end and covers 40% of planet’s surface.",
+    "fact16": "Mars has the largest canyon in our solar system, Valles Marineris. It is 4 miles deep and stretches thousands of miles long.",
+    "fact17": "Mars has north and south poles like earth. The polar ice caps are covered in a layer of frozen carbon dioxide (dry ice).",
+    "fact18": "As it’s so close to Earth, Mars is the planet that humans will most likely step foot on and explore first.",
+    "fact19": "We sent out Mars Rovers (which are like robots) on missions to explore Mars and collect samples and record scientific data for scientists on Earth to study. Some of these Rovers include Viking 1, Viking 2, Mars 2, Mars 3, Spirit, Phoenix, Pathfinder, Curiosity, and Opportunity.",
+    "fact20": "There is no evidence of life on Mars. However, it is the planet with the best conditions to support life and scientists believe there is potential for life under the surface of mars because they recently found water ice just under the surface."
+}

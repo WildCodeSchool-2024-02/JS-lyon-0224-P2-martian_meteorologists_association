@@ -14,7 +14,7 @@ function AddtionalInformation() {
     
             <div className="textContainer">
                 <h3>Did you know ?</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam maiores necessitatibus debitis, nesciunt dolores a enim quisquam eos labore deserunt voluptatem nam neque totam ullam, hic exercitationem facilis unde vel.</p>
+                <p>Mars has 2 moons called Deimos and Phobos. They are named after the two horses that pull the Roman god of war, Mars’, chariot. They may be asteroids captured by Mars’ gravity.</p>
             </div>
         
         </div>
