@@ -18,7 +18,7 @@ function ActualWeather({ currentTemperature }) {
       <div className="current_weather">
         <div className="currentWeather_box">
           <h3>(weather icon)</h3>
-          <h2>{formattedDate}</h2>
+          <h3>{formattedDate}</h3>
         </div>
         <p>{temperatureMars}°C</p>
       </div>
