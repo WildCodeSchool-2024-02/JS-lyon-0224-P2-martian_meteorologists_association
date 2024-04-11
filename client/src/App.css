@@ -9,14 +9,14 @@
   --container-color: #d9d9d9;
 }
 
-html {
-  height: 100%;
-}
-
 body {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
   height: 100%;
+}
+
+.mainPage {
+  padding: 1em;
 }
 
 h1,
@@ -25,4 +25,20 @@ h3,
 p {
   font-family: "victorMono";
   color: white;
+  margin: 0;
+}
+
+@media screen and (min-width: 431px) {
+  /* 
+  .mainPage {
+    display: flex;
+    
+    
+  } */
+  .globalInformation {
+    display: flex;
+    width: 85vw;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
 }
