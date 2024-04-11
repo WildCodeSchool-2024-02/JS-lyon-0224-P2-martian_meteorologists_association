@@ -24,7 +24,12 @@ function App() {
           </div>
           <div className="globalInformationcontainer">
             <div className="globalInformation">
-              <WeatherContainer />
+              <WeatherContainer 
+                windSpeed={weatherData.current.wind_speed_10m}
+                opacity={weatherData.current.cloud_cover}
+                sunrise={weatherData.daily.sunrise[3]}
+                sunset={weatherData.daily.sunset[3]}
+              />
               <AdditionalInformation />
             </div>
           </div>
