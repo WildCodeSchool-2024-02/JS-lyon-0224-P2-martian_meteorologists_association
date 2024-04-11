@@ -1,17 +1,13 @@
-/* Importation de la police */
 @font-face {
   font-family: "victorMono";
   src: url("./assets/fonts/VictorMono-VariableFont_wght.ttf") format("opentype");
 }
 
-/* création des variables  */
 :root {
   --main-color: #c96c37;
   --secondary-color: #8d3300;
-  --container-color: #d9d9d9; /* transparence 50 */
+  --container-color: #d9d9d9;
 }
-
-/* global */
 
 html {
   height: 100%;

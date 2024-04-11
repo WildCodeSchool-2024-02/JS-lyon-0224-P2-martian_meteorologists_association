@@ -4,6 +4,7 @@ import "./App.css";
 import WeatherComponent from "./API/Api";
 import WeatherContainer from "./components/WeatherContainer/WeatherContainer";
 import ActualWeather from "./components/ActualWeather/ActualWeather";
+import AdditionalInformation from "./components/AdditionalInformation/AdditionalInformation";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -20,6 +21,7 @@ function App() {
           <ActualWeather
             currentTemperature={weatherData.current.temperature_2m}
           />
+          <AdditionalInformation />;
         </div>
       ) : (
         <p>Loading...</p>
