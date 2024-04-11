@@ -17,10 +17,10 @@ function App() {
 
       {weatherData ? (
         <div>
-          <WeatherContainer />
           <ActualWeather
             currentTemperature={weatherData.current.temperature_2m}
           />
+          <WeatherContainer />
           <AdditionalInformation />;
         </div>
       ) : (
