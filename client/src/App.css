@@ -1,15 +1,14 @@
 /* Importation de la police */
 @font-face {
   font-family: "victorMono";
-  src:
-    url("./assets/fonts/VictorMono-VariableFont_wght.ttf") format("opentype")
+  src: url("./assets/fonts/VictorMono-VariableFont_wght.ttf") format("opentype");
 }
 
 /* création des variables  */
 :root {
-  --main-color: #C96C37;
-  --secondary-color : #8D3300 ;
-  --container-color:#D9D9D9; /* transparence 50 */
+  --main-color: #c96c37;
+  --secondary-color: #8d3300;
+  --container-color: #d9d9d9; /* transparence 50 */
 }
 
 /* global */
@@ -19,13 +18,15 @@ html {
 }
 
 body {
-  background: linear-gradient(#C96C37, #8D3300);
+  background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
   height: 100%;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   font-family: "victorMono";
   color: white;
 }
-

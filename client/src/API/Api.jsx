@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import axios from 'axios';
 
 const WeatherComponent = ({ setWeatherData }) => {
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -14,8 +13,7 @@ const WeatherComponent = ({ setWeatherData }) => {
     };
 
     fetchData();
-  }, []);
-
+  }, [setWeatherData]);
 
 };
 

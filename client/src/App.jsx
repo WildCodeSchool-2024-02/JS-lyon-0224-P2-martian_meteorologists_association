@@ -8,7 +8,10 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   return (
     <>
-      <WeatherComponent weatherData={weatherData} setWeatherData={setWeatherData} />
+      <WeatherComponent
+        weatherData={weatherData}
+        setWeatherData={setWeatherData}
+      />
       {weatherData ? (
         <div>
           <WeatherContainer />
@@ -17,7 +20,6 @@ function App() {
         <p>Loading...</p>
       )}
     </>
-
   );
 }
 
