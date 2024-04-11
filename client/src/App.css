@@ -29,16 +29,20 @@ p {
 }
 
 @media screen and (min-width: 431px) {
-  /* 
+  html {
+    height: 100%;
+  }
   .mainPage {
     display: flex;
-    
-    
-  } */
-  .globalInformation {
-    display: flex;
-    width: 85vw;
     flex-direction: column;
+  }
+
+  .globalInformationcontainer {
+    display: flex;
     justify-content: flex-end;
+  }
+
+  .globalInformation {
+    width: 80vw;
   }
 }
