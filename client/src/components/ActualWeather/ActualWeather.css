@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.current_weather {
+  background-color: rgba(217, 217, 217, 1);
+  text-align: center;
+  border-radius: 1.5rem;
+}
+.currentWeather_box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+canvas {
+  height: 15vh !important;
+  width: 15vh !important;
+}
+.mars {
+  padding-top: 2rem;
+}
+
+@media screen and (min-width: 500px) {
+  .container {
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .current_weather {
+    margin-left: auto;
+  }
+  .mars {
+    margin: 0 auto;
+  }
+  canvas {
+    height: 22vh !important;
+    width: 22vh !important;
+  }
+}
