@@ -1,3 +1,8 @@
+.globalInformationcontainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .informationContainer {
   background-color: rgba(217, 217, 217, 0.5);
   width: 80vw;
@@ -42,11 +47,16 @@
     width: 60px;
   }
 
+  .globalInformationcontainer {
+    display: flex;
+    justify-content: flex-end;
+  }
+
   .informationContainer {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    padding: 4vh;
+    padding: 2vh;
+    margin: 2rem;
   }
 
   .menulist {
