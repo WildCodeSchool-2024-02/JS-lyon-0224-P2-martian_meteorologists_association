@@ -17,17 +17,21 @@ function App() {
 
       {weatherData ? (
         <div className="mainPage">
-          <ActualWeather
-            currentTemperature={weatherData.current.temperature_2m}
-          />
-          <div className="globalInformation">
-            <WeatherContainer
-              opasity={weatherData.current.cloud_cover}
-              windSpeed={weatherData.current.wind_speed_10m}
-              sunRise={weatherData.daily.sunrise[1]}
-              sunSet={weatherData.daily.sunset[1]}
+          <div className="weather">
+            <ActualWeather
+              currentTemperature={weatherData.current.temperature_2m}
             />
-            <AdditionalInformation />;
+          </div>
+          <div className="globalInformationcontainer">
+            <div className="globalInformation">
+              <WeatherContainer
+                windSpeed={weatherData.current.wind_speed_10m}
+                opacity={weatherData.current.cloud_cover}
+                sunrise={weatherData.daily.sunrise[3]}
+                sunset={weatherData.daily.sunset[3]}
+              />
+              <AdditionalInformation />
+            </div>
           </div>
         </div>
       ) : (

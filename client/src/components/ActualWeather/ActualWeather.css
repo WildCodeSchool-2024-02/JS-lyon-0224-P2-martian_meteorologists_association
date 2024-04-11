@@ -49,6 +49,7 @@ canvas {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
 
   .current_weather {
