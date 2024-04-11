@@ -1,7 +1,6 @@
 import "./App.css";
-
+import { useState } from 'react';
 import WeatherComponent from "./API/Api";
-import React, { useState, useEffect } from 'react';
 import WeatherContainer from "./components/WeatherContainer/WeatherContainer";
 
 function App() {
