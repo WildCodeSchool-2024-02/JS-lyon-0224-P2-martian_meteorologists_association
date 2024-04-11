@@ -1,6 +1,8 @@
+import PropTypes from "prop-types"
 import "./WeatherContainer.css";
 
-function WeatherContainer() {
+function WeatherContainer({windSpeed, opacity, sunrise, sunset}) {
+  const opacityMars = opacity*3
   return (
     <div className="weatherContainer">
       <div className="windSpeed">
@@ -9,32 +11,37 @@ function WeatherContainer() {
           <br /> Speed
         </h3>
         <hr />
-        <p>40 km/h</p>
+        <p>{windSpeed}km/h</p>
         <br />
       </div>
       <div className="opasity">
         <h3>
-          Opasity
+          Opacity
           <br />
           Atmospheric
         </h3>
         <hr />
-        <p>400 NM</p>
+        <p>{opacityMars}NM</p>
         <br />
       </div>
       <div className="sunPositionContainer">
         <div className="sunPosition">
           <h3>Sunset</h3>
-          <p>15:55</p>
+          <p>{sunset}</p>
         </div>
         <span className="verticalBar" />
         <div className="sunPosition">
           <h3>Sunrise</h3>
-          <p>9:40</p>
+          <p>{sunrise}</p>
         </div>
       </div>
     </div>
   );
 }
-
+WeatherContainer.propTypes = {
+  windSpeed: PropTypes.number.isRequired,
+  opacity: PropTypes.number.isRequired,
+  sunrise: PropTypes.number.isRequired,
+  sunset: PropTypes.number.isRequired,
+};
 export default WeatherContainer;
