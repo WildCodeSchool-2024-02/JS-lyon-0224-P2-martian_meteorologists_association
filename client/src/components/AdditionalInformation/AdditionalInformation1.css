@@ -1,9 +1,10 @@
 .informationContainer {
   background-color: rgba(217, 217, 217, 0.5);
-  width: 85vw;
+  width: 80vw;
   border-radius: 1.5rem;
   padding: 1rem;
   margin: auto;
+  margin-top: 1.5rem;
 }
 
 .menu {
@@ -32,6 +33,7 @@
   font-weight: bold;
   text-align: center;
   font-size: 1.5rem;
+  margin: 1em;
 }
 
 /* Media Queries */

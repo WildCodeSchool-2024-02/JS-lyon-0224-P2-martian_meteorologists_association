@@ -10,9 +10,11 @@ body {
   align-items: center;
 }
 .current_weather {
-  background-color: rgba(217, 217, 217, 1);
+  background-color: rgba(217, 217, 217, 0.5);
   text-align: center;
   border-radius: 1.5rem;
+  width: 75vw;
+  padding: 0.5em;
 }
 .currentWeather_box {
   display: flex;
@@ -28,7 +30,7 @@ canvas {
   padding-top: 2rem;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 431px) {
   .container {
     flex-direction: row-reverse;
     justify-content: center;
