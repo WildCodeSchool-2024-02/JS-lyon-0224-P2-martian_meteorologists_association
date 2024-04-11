@@ -21,7 +21,12 @@ function App() {
             currentTemperature={weatherData.current.temperature_2m}
           />
           <div className="globalInformation">
-            <WeatherContainer />
+            <WeatherContainer
+              opasity={weatherData.current.cloud_cover}
+              windSpeed={weatherData.current.wind_speed_10m}
+              sunRise={weatherData.daily.sunrise[1]}
+              sunSet={weatherData.daily.sunset[1]}
+            />
             <AdditionalInformation />;
           </div>
         </div>

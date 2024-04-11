@@ -9,11 +9,11 @@ import "./ActualWeather.css";
 const weatherLogo = [
   {
     name: "cloud",
-    imgSrc: "./src/assets/weatherLogo/cloud_weather.svg",
+    imgSrc: "./src/assets/weatherLogo/cloud.svg",
   },
   {
-    name: "sunny",
-    imgSrc: "./assets/weatherLogo/cloud-weather.svg",
+    name: "sun",
+    imgSrc: "./assets/weatherLogo/sun.svg",
   },
 ];
 
@@ -27,17 +27,15 @@ function ActualWeather({ currentTemperature }) {
   return (
     <div className="container">
       <div className="current_weather">
+        <img
+          className="weatherLogo"
+          src={weatherLogo[0].imgSrc}
+          alt="cloud logo"
+        />
         <div className="currentWeather_box">
-          <h3>
-            <img
-              className="weatherLogo"
-              src={weatherLogo[0].imgSrc}
-              alt="cloud logo"
-            />
-          </h3>
           <h2>{formattedDate}</h2>
+          <p>{temperatureMars}°C</p>
         </div>
-        <p>{temperatureMars}°C</p>
       </div>
       <div className="mars">
         <Canvas>

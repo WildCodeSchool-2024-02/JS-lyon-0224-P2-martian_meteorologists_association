@@ -1,8 +1,3 @@
-.weatherLogo {
-  width: 2rem;
-  padding: 1rem;
-}
-
 .weatherContainer {
   display: flex;
   flex-wrap: wrap;
