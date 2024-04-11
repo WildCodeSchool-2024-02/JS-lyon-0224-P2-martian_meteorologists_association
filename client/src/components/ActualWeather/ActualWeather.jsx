@@ -6,6 +6,17 @@ import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./ActualWeather.css";
 
+const weatherLogo = [
+  {
+    name: "cloud",
+    imgSrc: "./src/assets/weatherLogo/cloud.svg",
+  },
+  {
+    name: "sun",
+    imgSrc: "./assets/weatherLogo/sun.svg",
+  },
+];
+
 function ActualWeather({ currentTemperature }) {
   const temperatureMars = currentTemperature * -2;
   const currentDate = new Date();
@@ -16,11 +27,15 @@ function ActualWeather({ currentTemperature }) {
   return (
     <div className="container">
       <div className="current_weather">
+        <img
+          className="weatherLogo"
+          src={weatherLogo[0].imgSrc}
+          alt="cloud logo"
+        />
         <div className="currentWeather_box">
-          <h3>(weather icon)</h3>
-          <h3>{formattedDate}</h3>
+          <h2>{formattedDate}</h2>
+          <p>{temperatureMars}°C</p>
         </div>
-        <p>{temperatureMars}°C</p>
       </div>
       <div className="mars">
         <Canvas>
