@@ -1,4 +1,3 @@
-
 import "./WeatherContainer.css";
 
 function WeatherContainer() {

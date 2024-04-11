@@ -1,5 +1,6 @@
 import "./App.css";
-import { useState } from 'react';
+import { useState } from "react";
+
 import WeatherComponent from "./API/Api";
 import WeatherContainer from "./components/WeatherContainer/WeatherContainer";
 
