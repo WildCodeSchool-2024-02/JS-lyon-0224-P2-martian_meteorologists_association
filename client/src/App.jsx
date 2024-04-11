@@ -17,12 +17,16 @@ function App() {
 
       {weatherData ? (
         <div className="mainPage">
-          <ActualWeather
-            currentTemperature={weatherData.current.temperature_2m}
-          />
-          <div className="globalInformation">
-            <WeatherContainer />
-            <AdditionalInformation />;
+          <div className="weather">
+            <ActualWeather
+              currentTemperature={weatherData.current.temperature_2m}
+            />
+          </div>
+          <div className="globalInformationcontainer">
+            <div className="globalInformation">
+              <WeatherContainer />
+              <AdditionalInformation />
+            </div>
           </div>
         </div>
       ) : (
