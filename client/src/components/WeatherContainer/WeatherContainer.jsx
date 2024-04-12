@@ -41,7 +41,7 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
 WeatherContainer.propTypes = {
   windSpeed: PropTypes.number.isRequired,
   opacity: PropTypes.number.isRequired,
-  sunrise: PropTypes.number.isRequired,
-  sunset: PropTypes.number.isRequired,
+  sunrise: PropTypes.string.isRequired,
+  sunset: PropTypes.string.isRequired,
 };
 export default WeatherContainer;
