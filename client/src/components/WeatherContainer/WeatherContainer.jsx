@@ -3,6 +3,8 @@ import "./WeatherContainer.css";
 
 function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
   const opacityMars = opacity * 3;
+  const slicedSunrise = sunrise.slice(11, 16);
+  const slicedSunset = sunset.slice(11, 16);
   return (
     <div className="weatherContainer">
       <div className="windSpeed">
@@ -27,12 +29,12 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
       <div className="sunPositionContainer">
         <div className="sunPosition">
           <h3>Sunset</h3>
-          <p>{sunset}</p>
+          <p>{slicedSunset}</p>
         </div>
         <span className="verticalBar" />
         <div className="sunPosition">
           <h3>Sunrise</h3>
-          <p>{sunrise}</p>
+          <p>{slicedSunrise}</p>
         </div>
       </div>
     </div>
