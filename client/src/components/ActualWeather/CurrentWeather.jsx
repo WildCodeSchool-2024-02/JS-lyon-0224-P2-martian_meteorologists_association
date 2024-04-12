@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
-import "./ActualWeather.css";
+import "./CurrentWeather.css";
 
 const weatherLogo = [
   {
@@ -17,7 +17,7 @@ const weatherLogo = [
   },
 ];
 
-function ActualWeather({ currentTemperature }) {
+function CurrentWeather({ currentTemperature }) {
   const temperatureMars = currentTemperature * -2;
   const currentDate = new Date();
   const day = currentDate.getDate();
@@ -51,22 +51,11 @@ function ActualWeather({ currentTemperature }) {
           </Suspense>
         </Canvas>
       </div>
-
-      {/* <Canvas>
-        <ambientLight />
-        <OrbitControls enableZoom={false} autoRotate={true} enablePan={false} enableRotate={false} />  
-        
-          <Mars position={[0, 0, 0]} />
-        
-        <Environment preset='sunset' />
-        <ContactShadows opacity={0.5} scale={10} blur={1} far={10} resolution={256} color={'#000000'} />
-        
-      </Canvas> */}
     </div>
   );
 }
 
-ActualWeather.propTypes = {
+CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
 };
-export default ActualWeather;
+export default CurrentWeather;

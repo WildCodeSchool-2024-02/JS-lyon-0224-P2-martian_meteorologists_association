@@ -15,7 +15,8 @@ const WeatherComponent = ({ setWeatherData }) => {
     };
 
     fetchData();
-  }, [setWeatherData]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 };
 
 export default WeatherComponent;
