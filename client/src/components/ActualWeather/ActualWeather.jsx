@@ -23,7 +23,7 @@ function ActualWeather({ currentTemperature }) {
   const day = currentDate.getDate();
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
   const year = currentDate.getFullYear();
-  const formattedDate = `${day}/${month}/${year}`; // add 1 to the month value to get the actual month
+  const formattedDate = `${day}/${month + 1}/${year}`; // add 1 to the month value to get the actual month
   return (
     <div className="container">
       <div className="current_weather">
