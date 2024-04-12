@@ -13,7 +13,7 @@
   text-align: center;
 }
 
-.opasity {
+.opacity {
   width: 36vw;
   border-radius: 1.5rem;
   background-color: rgba(217, 217, 217, 0.5);
@@ -67,7 +67,7 @@ hr {
     padding: 0;
   }
 
-  .opasity {
+  .opacity {
     width: 20vw;
     margin: 1rem;
     padding: 1rem;

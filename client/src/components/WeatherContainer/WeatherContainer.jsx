@@ -1,10 +1,8 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import "./WeatherContainer.css";
 
-
-
 function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
-  const opacityMars = opacity * 3
+  const opacityMars = opacity * 3;
   return (
     <div className="weatherContainer">
       <div className="windSpeed">
@@ -16,7 +14,7 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
         <p>{windSpeed}km/h</p>
         <br />
       </div>
-      <div className="opasity">
+      <div className="opacity">
         <h3>
           Opacity
           <br />
