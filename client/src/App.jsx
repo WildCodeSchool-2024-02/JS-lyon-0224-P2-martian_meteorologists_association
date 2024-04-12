@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 
-import WeatherComponent from "./API/Api";
+import WeatherComponent from "./API/WeatherComponent";
 import WeatherContainer from "./components/WeatherContainer/WeatherContainer";
-import ActualWeather from "./components/ActualWeather/ActualWeather";
+import CurrentWeather from "./components/ActualWeather/CurrentWeather";
 import AdditionalInformation from "./components/AdditionalInformation/AdditionalInformation";
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       {weatherData ? (
         <div className="mainPage">
           <div className="weather">
-            <ActualWeather
+            <CurrentWeather
               currentTemperature={weatherData.current.temperature_2m}
             />
           </div>
