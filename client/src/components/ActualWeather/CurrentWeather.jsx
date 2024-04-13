@@ -52,6 +52,7 @@ function CurrentWeather({ currentTemperature }) {
     if (weatherData) {
       setCurrentLogo(getWeatherLogo());
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weatherData]);
 
   const temperatureMars = currentTemperature * -2;
