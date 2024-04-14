@@ -29,25 +29,22 @@ const weatherLogo = [
   },
 ];
 
-
-
 function CurrentWeather({ currentTemperature }) {
   const [weatherData, setWeatherData] = useState(null);
   const [currentLogo, setCurrentLogo] = useState(null);
 
-
   const getWeatherLogo = () => {
     if (weatherData && weatherData.current.wind_speed_10m > 60) {
-      weatherLogo.find(logo => logo.name === "wind");
-    } else if (weatherData && weatherData.current.cloud_cover > 50) {
-      weatherLogo.find(logo => logo.name === "cloud");
-    } else if (weatherData && weatherData.current.snowfall > 0) {
-      weatherLogo.find(logo => logo.name === "snow");
-    } else {
-      return weatherLogo.find(logo => logo.name === "sun")
+      return weatherLogo.find((logo) => logo.name === "wind");
     }
-    return getWeatherLogo();
-  }
+    if (weatherData && weatherData.current.cloud_cover > 50) {
+      return weatherLogo.find((logo) => logo.name === "cloud");
+    }
+    if (weatherData && weatherData.current.snowfall > 0) {
+      return weatherLogo.find((logo) => logo.name === "snow");
+    }
+    return weatherLogo.find((logo) => logo.name === "sun");
+  };
   useEffect(() => {
     if (weatherData) {
       setCurrentLogo(getWeatherLogo());
@@ -62,7 +59,6 @@ function CurrentWeather({ currentTemperature }) {
   const year = currentDate.getFullYear();
   const formattedDate = `${day}/${month + 1}/${year}`; // add 1 to the month value to get the actual month
 
-
   return (
     <div className="container">
       <WeatherComponent
@@ -70,7 +66,13 @@ function CurrentWeather({ currentTemperature }) {
         setWeatherData={setWeatherData}
       />
       <div className="current_weather">
-        {currentLogo && <img src={currentLogo.imgSrc} alt={currentLogo.name} className="weatherLogo" />}
+        {currentLogo && (
+          <img
+            src={currentLogo.imgSrc}
+            alt={currentLogo.name}
+            className="weatherLogo"
+          />
+        )}
         <div className="currentWeather_box">
           <h2>{formattedDate}</h2>
           <p>{temperatureMars}°C</p>
