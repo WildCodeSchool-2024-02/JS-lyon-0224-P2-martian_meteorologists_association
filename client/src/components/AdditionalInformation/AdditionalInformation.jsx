@@ -21,6 +21,7 @@ function AdditionalInformation() {
     },
   ];
 
+
   const handleClick = (event) => {
     const test = parseInt(event.currentTarget.value, 10);
     setContainerIndex(test);
@@ -38,7 +39,7 @@ function AdditionalInformation() {
             </li>
             <li className="menuicon">
               <button value="2" onClick={handleClick} type="submit">
-                <img src="src/assets/images/activity.svg" alt="funFact" />
+                <img src="src/assets/images/activity.svg" alt="activity" />
               </button>
             </li>
             <li className="menuicon">
