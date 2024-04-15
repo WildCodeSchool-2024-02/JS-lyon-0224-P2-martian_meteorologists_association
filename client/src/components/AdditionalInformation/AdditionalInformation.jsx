@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import "./AdditionalInformation1.css";
 import FunFacts from "../../BDD/FunFacts";
 
@@ -6,7 +7,7 @@ function AdditionalInformation() {
   const randomIndex = Math.floor(Math.random() * FunFacts.length);
   const [containerIndex, setContainerIndex] = useState(0);
 
-  const obj = [
+  const information = [
     {
       title: "Did you know",
       text: FunFacts[randomIndex],
@@ -23,8 +24,8 @@ function AdditionalInformation() {
 
 
   const handleClick = (event) => {
-    const test = parseInt(event.currentTarget.value, 10);
-    setContainerIndex(test);
+    const infoIndex = parseInt(event.currentTarget.value, 10);
+    setContainerIndex(infoIndex);
   };
 
   return (
@@ -51,8 +52,8 @@ function AdditionalInformation() {
         </div>
 
         <div className="textContainer">
-          <h3 className="additionalh3">{obj[containerIndex].title}</h3>
-          <p className="additionalp">{obj[containerIndex].text}</p>
+          <h3 className="additionalh3">{information [containerIndex].title}</h3>
+          <p className="additionalp">{information [containerIndex].text}</p>
         </div>
       </div>
     </div>

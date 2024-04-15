@@ -1,10 +1,9 @@
-import { useState, Suspense, useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./CurrentWeather.css";
-import WeatherComponent from "../../API/WeatherComponent";
 
 const weatherLogo = [
   {
@@ -39,25 +38,25 @@ const weatherLogo = [
   },
 ];
 
-function CurrentWeather({ currentTemperature }) {
-  const [weatherData, setWeatherData] = useState(null);
-  const [currentWeather, setCurrentWeather] = useState(null);
+function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather, windSpeed, opacity, snowFall }) {
 
+  // Récupération de l'index météo du tableau weatherLogo en fonction des conditions météo
   useEffect(() => {
-    if (weatherData) {
-      if (weatherData.current.wind_speed_10m > 60) {
+      if (windSpeed > 60) {
         setCurrentWeather(4);
-      } else if (weatherData.current.cloud_cover > 50) {
+      } else if (opacity > 50) {
         setCurrentWeather(0);
-      } else if (weatherData.current.snowfall > 0) {
+      } else if (snowFall > 0) {
         setCurrentWeather(2);
       } else {
         setCurrentWeather(1);
       }
-    }
-  }, [weatherData]);
+})
 
+// modification de la température la rendre plus martienne
   const temperatureMars = currentTemperature * -2;
+
+  // Récupération de la date
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
@@ -66,23 +65,22 @@ function CurrentWeather({ currentTemperature }) {
 
   return (
     <div className="container">
-      <WeatherComponent
-        weatherData={weatherData}
-        setWeatherData={setWeatherData}
-      />
       <div className="current_weather">
-        {currentWeather !== null && (
+
+        {/* changement de l'icon météo en fonction des conditions météo */}
           <img
             src={weatherLogo[currentWeather].imgSrc}
             alt={weatherLogo[currentWeather].name}
             className="weatherLogo"
           />
-        )}
+          
         <div className="currentWeather_box">
           <h2>{formattedDate}</h2>
           <p>{temperatureMars}°C</p>
         </div>
       </div>
+
+      {/* Planète Mars qui tourne */}
       <div className="mars">
         <Canvas>
           <ambientLight intensity={1.8} color="#ffffff" />
@@ -101,8 +99,15 @@ function CurrentWeather({ currentTemperature }) {
   );
 }
 
+
+// PropTypes validation
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
+  currentWeather: PropTypes.number.isRequired,
+  setCurrentWeather: PropTypes.func.isRequired,
+  opacity: PropTypes.number.isRequired,
+  windSpeed: PropTypes.number.isRequired,
+  snowFall: PropTypes.number.isRequired,
 };
 
 export default CurrentWeather;
