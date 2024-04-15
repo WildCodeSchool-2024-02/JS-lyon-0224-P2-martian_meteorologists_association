@@ -22,7 +22,7 @@ function AdditionalInformation() {
     },
   ];
 
-// Modification de l'index du tableau Information en fonction du bouton
+// Modification de l'index du tableau Information en fonction du bouton cliqué
   const handleClick = (event) => {
     const infoIndex = parseInt(event.currentTarget.value, 10);
     setContainerIndex(infoIndex);
