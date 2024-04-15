@@ -31,25 +31,20 @@ const weatherLogo = [
 
 function CurrentWeather({ currentTemperature }) {
   const [weatherData, setWeatherData] = useState(null);
-  const [currentLogo, setCurrentLogo] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(null);
 
-  const getWeatherLogo = () => {
-    if (weatherData && weatherData.current.wind_speed_10m > 60) {
-      return weatherLogo.find((logo) => logo.name === "wind");
-    }
-    if (weatherData && weatherData.current.cloud_cover > 50) {
-      return weatherLogo.find((logo) => logo.name === "cloud");
-    }
-    if (weatherData && weatherData.current.snowfall > 0) {
-      return weatherLogo.find((logo) => logo.name === "snow");
-    }
-    return weatherLogo.find((logo) => logo.name === "sun");
-  };
   useEffect(() => {
     if (weatherData) {
-      setCurrentLogo(getWeatherLogo());
+      if (weatherData.current.wind_speed_10m > 60) {
+        setCurrentWeather(4);
+      } else if (weatherData.current.cloud_cover > 50) {
+        setCurrentWeather(0);
+      } else if (weatherData.current.snowfall > 0) {
+        setCurrentWeather(2);
+      } else {
+        setCurrentWeather(1);
+      }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weatherData]);
 
   const temperatureMars = currentTemperature * -2;
@@ -58,7 +53,6 @@ function CurrentWeather({ currentTemperature }) {
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
   const year = currentDate.getFullYear();
   const formattedDate = `${day}/${month + 1}/${year}`; // add 1 to the month value to get the actual month
-
   return (
     <div className="container">
       <WeatherComponent
@@ -66,10 +60,10 @@ function CurrentWeather({ currentTemperature }) {
         setWeatherData={setWeatherData}
       />
       <div className="current_weather">
-        {currentLogo && (
+        {currentWeather !== null && (
           <img
-            src={currentLogo.imgSrc}
-            alt={currentLogo.name}
+            src={weatherLogo[currentWeather].imgSrc}
+            alt={weatherLogo[currentWeather].name}
             className="weatherLogo"
           />
         )}
@@ -99,4 +93,5 @@ function CurrentWeather({ currentTemperature }) {
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
 };
+
 export default CurrentWeather;
