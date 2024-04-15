@@ -10,46 +10,51 @@ const weatherLogo = [
   {
     name: "cloud",
     imgSrc: "./src/assets/weatherLogo/cloud.svg",
+    activity: "skydiving",
+    clothes: "cloud",
   },
   {
     name: "sun",
     imgSrc: "./src/assets/weatherLogo/sun.svg",
+    activity: "dont watch the sun",
+    clothes: "sun",
   },
   {
     name: "snow",
     imgSrc: "./src/assets/weatherLogo/snow.svg",
+    activity: "ski",
+    clothes: "snow",
   },
   {
     name: "storm",
     imgSrc: "./src/assets/weatherLogo/storm.svg",
+    activity: "kite",
+    clothes: "storm",
   },
   {
     name: "wind",
     imgSrc: "./src/assets/weatherLogo/wind.svg",
+    activity: "stay home !",
+    clothes: "wind",
   },
 ];
 
 function CurrentWeather({ currentTemperature }) {
   const [weatherData, setWeatherData] = useState(null);
-  const [currentLogo, setCurrentLogo] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(null);
 
-  const getWeatherLogo = () => {
-    if (weatherData && weatherData.current.wind_speed_10m > 60) {
-      return weatherLogo.find((logo) => logo.name === "wind");
-    }
-    if (weatherData && weatherData.current.cloud_cover > 50) {
-      return weatherLogo.find((logo) => logo.name === "cloud");
-    }
-    if (weatherData && weatherData.current.snowfall > 0) {
-      return weatherLogo.find((logo) => logo.name === "snow");
-    }
-    return weatherLogo.find((logo) => logo.name === "sun");
-  };
   useEffect(() => {
     if (weatherData) {
-      setCurrentLogo(getWeatherLogo());
+      if (weatherData.current.wind_speed_10m > 60) {
+        setCurrentWeather(4);
+      } else if (weatherData.current.cloud_cover > 50) {
+        setCurrentWeather(0);
+      } else if (weatherData.current.snowfall > 0) {
+        setCurrentWeather(2);
+      } else {
+        setCurrentWeather(1);
+      }
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [weatherData]);
 
   const temperatureMars = currentTemperature * -2;
@@ -66,10 +71,10 @@ function CurrentWeather({ currentTemperature }) {
         setWeatherData={setWeatherData}
       />
       <div className="current_weather">
-        {currentLogo && (
+        {currentWeather !== null && (
           <img
-            src={currentLogo.imgSrc}
-            alt={currentLogo.name}
+            src={weatherLogo[currentWeather].imgSrc}
+            alt={weatherLogo[currentWeather].name}
             className="weatherLogo"
           />
         )}
@@ -99,4 +104,5 @@ function CurrentWeather({ currentTemperature }) {
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
 };
+
 export default CurrentWeather;

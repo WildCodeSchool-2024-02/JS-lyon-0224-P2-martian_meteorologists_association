@@ -31,8 +31,16 @@
   padding: 0 1rem;
 }
 
-.menuicon > img {
-  width: 50px;
+.menuicon > button {
+  background-color: transparent;
+  width: 60px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menuicon > button > img {
+  width: 60px;
 }
 
 .additionalh3 {
