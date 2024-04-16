@@ -35,8 +35,8 @@ function App() {
                 sunrise={weatherData.daily.sunrise[3]}
                 sunset={weatherData.daily.sunset[3]}
               />
-              
-              <AdditionalInformation />
+
+              <AdditionalInformation CurrentWeather={currentWeather} />
             </div>
           </div>
         </div>

@@ -4,39 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./CurrentWeather.css";
-
-const weatherLogo = [
-  {
-    name: "cloud",
-    imgSrc: "./src/assets/weatherLogo/cloud.svg",
-    activity: "skydiving",
-    clothes: "cloud",
-  },
-  {
-    name: "sun",
-    imgSrc: "./src/assets/weatherLogo/sun.svg",
-    activity: "dont watch the sun",
-    clothes: "sun",
-  },
-  {
-    name: "snow",
-    imgSrc: "./src/assets/weatherLogo/snow.svg",
-    activity: "ski",
-    clothes: "snow",
-  },
-  {
-    name: "storm",
-    imgSrc: "./src/assets/weatherLogo/storm.svg",
-    activity: "kite",
-    clothes: "storm",
-  },
-  {
-    name: "wind",
-    imgSrc: "./src/assets/weatherLogo/wind.svg",
-    activity: "stay home !",
-    clothes: "wind",
-  },
-];
+import WeatherLogo from "../../BDD/WeatherLogo";
 
 function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather, windSpeed, opacity, snowFall }) {
 
@@ -69,8 +37,8 @@ function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather,
 
         {/* changement de l'icon météo en fonction des conditions météo */}
           <img
-            src={weatherLogo[currentWeather].imgSrc}
-            alt={weatherLogo[currentWeather].name}
+            src={WeatherLogo[currentWeather].imgSrc}
+            alt={WeatherLogo[currentWeather].name}
             className="weatherLogo"
           />
           
