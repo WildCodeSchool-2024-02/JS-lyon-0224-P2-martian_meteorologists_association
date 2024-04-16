@@ -17,7 +17,6 @@ const WeatherComponent = ({ setWeatherData }) => {
     fetchData(setWeatherData);
   }, [setWeatherData]);
 
-  // It seems like you don't need this comment, as there's no exhaustive dependencies.
 };
 
 export default WeatherComponent;
