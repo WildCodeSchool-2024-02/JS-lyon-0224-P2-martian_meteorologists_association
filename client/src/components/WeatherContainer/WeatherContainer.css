@@ -1,7 +1,7 @@
 .weatherContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin-top: 2rem;
 }
 
@@ -77,5 +77,13 @@ hr {
     width: 20vw;
     margin: 1rem;
     padding: 1rem;
+  }
+
+  .windSpeed > p {
+    margin-top: 2.5rem;
+  }
+
+  .opacity > p {
+    margin-top: 2.5rem;
   }
 }

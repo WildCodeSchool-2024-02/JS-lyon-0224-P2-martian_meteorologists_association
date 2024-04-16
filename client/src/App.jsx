@@ -8,20 +8,25 @@ import AdditionalInformation from "./components/AdditionalInformation/Additional
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
+  const [currentWeather, setCurrentWeather] = useState(1);
+
   return (
     <>
-      <WeatherComponent
-        weatherData={weatherData}
-        setWeatherData={setWeatherData}
-      />
+      <WeatherComponent setWeatherData={setWeatherData} />
 
       {weatherData ? (
         <div className="mainPage">
           <div className="weather">
             <CurrentWeather
               currentTemperature={weatherData.current.temperature_2m}
+              windSpeed={weatherData.current.wind_speed_10m}
+              opacity={weatherData.current.cloud_cover}
+              snowFall={weatherData.current.snowfall}
+              currentWeather={currentWeather}
+              setCurrentWeather={setCurrentWeather}
             />
           </div>
+
           <div className="globalInformationcontainer">
             <div className="globalInformation">
               <WeatherContainer
@@ -30,7 +35,8 @@ function App() {
                 sunrise={weatherData.daily.sunrise[3]}
                 sunset={weatherData.daily.sunset[3]}
               />
-              <AdditionalInformation />
+
+              <AdditionalInformation CurrentWeather={currentWeather} />
             </div>
           </div>
         </div>
