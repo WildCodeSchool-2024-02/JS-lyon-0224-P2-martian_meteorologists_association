@@ -6,16 +6,20 @@
 
 .navIcon {
   width: 3.3rem;
-  height: 3.3rem;
   padding-top: 0.5rem;
+  /* padding-bottom: 4rem; */
 }
 
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 725px) {
   .navbar {
-    flex-direction: column; /* Add this line to make the navbar a column on desktop */
-    align-items: flex-start; /* Add this line to align the icons to the left */
-    padding-left: 2rem; /* Add this line to add some space on the left */
+    flex-direction: column;
+    /* Add this line to make the navbar a column on desktop */
+    align-items: flex-start;
+    /* Add this line to align the icons to the left */
+    padding: 1rem 1.5rem 8rem 0;
+    /* Add this line to add some space on the left */
   }
+
   .navIcon {
     width: 4.2rem;
     height: 4.2rem;

@@ -47,7 +47,7 @@ hr {
 
 /*/////////////Responsive////////////////*/
 
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 725px) {
   .weatherContainer {
     flex-wrap: unset;
   }

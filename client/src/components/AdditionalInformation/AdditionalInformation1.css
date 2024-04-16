@@ -51,18 +51,18 @@
 }
 
 /* Media Queries */
-@media screen and (min-width: 250px) and (max-width: 370px) {
-  .opacity {
+@media screen and (min-width: 250px) and (max-width: 450px) {
+  /* .opacity {
     width: auto;
-  }
+  } */
 
   .sunPositionContainer {
-    width: auto;
+    /* width: auto; */
     margin: 1rem 1rem;
   }
 
   .informationContainer {
-    width: 90vw;
+    margin-bottom: 4rem;
   }
 
   .menuicon {
@@ -70,7 +70,7 @@
   }
 }
 
-@media only screen and (min-width: 431px) {
+@media only screen and (min-width: 725px) {
   .menuicon > img {
     width: 60px;
   }
@@ -84,7 +84,8 @@
     display: flex;
     flex-direction: row;
     padding: 2vh;
-    margin: 3rem;
+    margin: 2rem;
+    margin-bottom: 25rem;
   }
 
   .menulist {
@@ -112,5 +113,6 @@
 @media screen and (min-width: 1102px) {
   .informationContainer {
     margin: 3.5rem;
+    margin-bottom: 11rem;
   }
 }

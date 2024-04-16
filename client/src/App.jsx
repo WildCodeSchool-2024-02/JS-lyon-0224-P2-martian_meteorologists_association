@@ -5,6 +5,7 @@ import WeatherComponent from "./API/WeatherComponent";
 import WeatherContainer from "./components/WeatherContainer/WeatherContainer";
 import CurrentWeather from "./components/ActualWeather/CurrentWeather";
 import AdditionalInformation from "./components/AdditionalInformation/AdditionalInformation";
+// import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -14,6 +15,7 @@ function App() {
 
       {weatherData ? (
         <div className="mainPage">
+          {/* <Navbar /> */}
           <div className="weather">
             <CurrentWeather
               currentTemperature={weatherData.current.temperature_2m}

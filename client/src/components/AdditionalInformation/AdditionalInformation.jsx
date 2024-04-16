@@ -21,7 +21,6 @@ function AdditionalInformation() {
     },
   ];
 
-
   const handleClick = (event) => {
     const test = parseInt(event.currentTarget.value, 10);
     setContainerIndex(test);

@@ -2,9 +2,13 @@ import "./Navbar.css";
 
 export default function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="navIcon">
-        <img src="src/assets/images/page2_icon.svg" alt="rocket_icon" />
+    <nav>
+      <div className="navBar">
+        <img
+          className="navIcon"
+          src="src/assets/images/menu_icon.svg"
+          alt="menu_icon"
+        />
       </div>
     </nav>
   );
