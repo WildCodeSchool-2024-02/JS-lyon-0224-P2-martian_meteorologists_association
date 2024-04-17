@@ -2,6 +2,8 @@ h1 {
   text-align: center;
 }
 
+/* Shuttle Selection */
+
 .shipContainer {
   display: flex;
   flex-direction: column;
@@ -15,6 +17,19 @@ h1 {
   justify-content: space-evenly;
   margin: 4vh;
 }
+
+.shipChoice {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 30vw;
+  height: 15vh;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -33,11 +48,14 @@ p {
   margin: 1vh;
 }
 
+/* dates Selection */
+
 .dateChoice {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 30vh;
 }
 
 #datesContainer {
@@ -45,22 +63,30 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 2vh;
+  margin-bottom: 3vh;
 }
+
 #date {
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
-  padding: 1vw;
-  margin-bottom: 3vw;
   border-radius: 1.5rem;
+  padding: 1vh;
 }
+
+.validationButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Reservation button and price */
 
 #reservationButton {
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
-  margin-bottom: 3vw;
   border-radius: 1.5rem;
   font-weight: bold;
   font-size: large;
@@ -71,14 +97,42 @@ p {
   align-items: center;
 }
 
-.shipChoice {
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(217, 217, 217, 0.5);
-  width: 30vw;
-  height: 15vh;
-  border-radius: 1.5rem;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.validationButton {
+  margin-bottom: 3vh;
+}
+
+/*/////////////Responsive////////////////*/
+
+@media screen and (min-width: 725px) {
+  .shipContainer {
+    flex-direction: row;
+  }
+
+  .shipCards {
+    flex-direction: column;
+    margin: 4vw;
+    width: 15vw;
+  }
+
+  .shipChoice {
+    width: 10vw;
+    margin-bottom: 5vh;
+  }
+
+  .card {
+    width: 55vw;
+    height: 55vh;
+  }
+
+  .dateChoice {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  /* .validationButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
 }

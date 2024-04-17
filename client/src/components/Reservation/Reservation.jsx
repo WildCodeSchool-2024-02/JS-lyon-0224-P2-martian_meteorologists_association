@@ -55,13 +55,15 @@ export default function Reservation() {
           <input type="date" id="date" name="date" />
         </label>
 
-        <div className="price">
-          <p>price : 500 000 000 $</p>
-        </div>
+        <div className="validationButton">
+          <div className="price">
+            <p>price : 500 000 000 $</p>
+          </div>
 
-        <button type="button" id="reservationButton">
-          <p>validate</p>
-        </button>
+          <button type="button" id="reservationButton">
+            <p>validate</p>
+          </button>
+        </div>
       </div>
     </div>
   );
