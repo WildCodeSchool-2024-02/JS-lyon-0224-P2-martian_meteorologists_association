@@ -63,7 +63,7 @@ function AdditionalInformation({ CurrentWeather }) {
 }
 
 AdditionalInformation.propTypes = {
-  CurrentWeather: PropTypes.string.isRequired,
+  CurrentWeather: PropTypes.number.isRequired,
 };
 
 export default AdditionalInformation;
