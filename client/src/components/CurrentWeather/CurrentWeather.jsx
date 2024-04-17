@@ -14,7 +14,7 @@ function CurrentWeather({
   opacity,
   snowFall,
 }) {
-  // Récupération de l'index météo du tableau weatherLogo en fonction des conditions météo
+  // get index meteo from BDD Weather Logo
   useEffect(() => {
     if (windSpeed > 60) {
       setCurrentWeather(4);
@@ -25,12 +25,12 @@ function CurrentWeather({
     } else {
       setCurrentWeather(1);
     }
-  });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // modification de la température la rendre plus martienne
   const temperatureMars = currentTemperature * -2;
 
-  // Récupération de la date
+  // Get date of the day
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
@@ -39,7 +39,7 @@ function CurrentWeather({
   return (
     <div className="container">
       <div className="current_weather">
-        {/* changement de l'icon météo en fonction des conditions météo */}
+        {/* change weather icon according to the weather */}
         <img
           src={WeatherLogo[currentWeather].imgSrc}
           alt={WeatherLogo[currentWeather].name}
@@ -52,7 +52,7 @@ function CurrentWeather({
         </div>
       </div>
 
-      {/* Planète Mars qui tourne */}
+      {/* rotating Mars */}
       <div className="mars">
         <Canvas>
           <ambientLight intensity={1.8} color="#ffffff" />
