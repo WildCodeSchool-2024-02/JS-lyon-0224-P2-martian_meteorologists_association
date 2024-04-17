@@ -59,7 +59,7 @@ hr {
   .sunPositionContainer {
     width: 20vw;
     margin: 1rem;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .sunPosition {
