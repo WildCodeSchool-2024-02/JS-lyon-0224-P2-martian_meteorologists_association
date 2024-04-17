@@ -23,13 +23,14 @@ html {
 h1,
 h2,
 h3,
+h4,
 p {
   font-family: "victorMono";
   color: white;
   margin: 0;
 }
 
-@media screen and (min-width: 431px) {
+@media screen and (min-width: 725px) {
   .mainPage {
     display: flex;
     flex-direction: column;

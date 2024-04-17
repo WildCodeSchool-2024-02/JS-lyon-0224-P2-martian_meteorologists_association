@@ -1,14 +1,29 @@
-import { Link } from "react-router-dom";
-
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar() {
+export default function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="navbar">
-      <div className="navIcon">
-        <Link to="/reservation">reservation</Link>
-        <img src="src/assets/images/page2_icon.svg" alt="rocket_icon" />
-      </div>
+    <nav>
+      <button
+        type="button"
+        className="menu-button"
+        onClick={() => {
+          setMenuOpen(!menuOpen);
+        }}
+      >
+        <img src="/src/assets/images/menu_icon.svg" alt="menu button" />
+      </button>
+      <ul className={menuOpen ? "open" : ""}>
+        <li>
+          <NavLink to="/">Mars weather</NavLink>
+        </li>
+        <li>
+          <NavLink to="/reservation">Visit Mars</NavLink>
+        </li>
+      </ul>
     </nav>
   );
 }
