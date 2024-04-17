@@ -15,7 +15,12 @@ export default function Reservation() {
       <div className="shipContainer">
         <div className="shipCards">
           <article className="shipChoice">
-            <button value="0" onClick={handleClick} type="submit">
+            <button
+              value="0"
+              onClick={handleClick}
+              type="submit"
+              className="selectShuttle"
+            >
               <img
                 src="src/assets/images/pexels-pixabay-2159.webp"
                 alt=""
@@ -26,7 +31,12 @@ export default function Reservation() {
           </article>
 
           <article className="shipChoice">
-            <button value="1" onClick={handleClick} type="submit">
+            <button
+              value="1"
+              onClick={handleClick}
+              type="submit"
+              className="selectShuttle"
+            >
               <img
                 src="src/assets/images/pexels-pixabay-2159.webp"
                 alt=""
@@ -37,7 +47,12 @@ export default function Reservation() {
           </article>
 
           <article className="shipChoice">
-            <button value="2" onClick={handleClick} type="submit">
+            <button
+              value="2"
+              onClick={handleClick}
+              type="submit"
+              className="selectShuttle"
+            >
               <img
                 src="src/assets/images/pexels-pixabay-2159.webp"
                 alt=""
@@ -49,10 +64,14 @@ export default function Reservation() {
         </div>
 
         <div className="card">
-          {ShuttleCards[cardIndex].image}
+          <img
+            src={ShuttleCards[cardIndex].image}
+            alt={ShuttleCards[cardIndex].activTy}
+          />
+
           <h2>{ShuttleCards[cardIndex].activTy}</h2>
           <p>{ShuttleCards[cardIndex].description}</p>
-        </div> 
+        </div>
       </div>
 
       <div className="dateChoice">
