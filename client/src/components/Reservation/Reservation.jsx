@@ -50,9 +50,9 @@ export default function Reservation() {
       </div>
 
       <div className="dateChoice">
-        <label id="datesContainer">
+        <label className="datesContainer">
           <p>select your dates</p>
-          <input type="date" id="date" name="date" />
+          <input type="date" className="date" name="date" />
         </label>
 
         <div className="validationButton">
@@ -60,7 +60,7 @@ export default function Reservation() {
             <p>price : 500 000 000 $</p>
           </div>
 
-          <button type="button" id="reservationButton">
+          <button type="button" className="reservationButton">
             <p>validate</p>
           </button>
         </div>

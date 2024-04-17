@@ -58,7 +58,7 @@ p {
   min-height: 30vh;
 }
 
-#datesContainer {
+.datesContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +66,7 @@ p {
   margin-bottom: 3vh;
 }
 
-#date {
+.date {
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
@@ -83,7 +83,7 @@ p {
 
 /* Reservation button and price */
 
-#reservationButton {
+.reservationButton {
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
@@ -103,7 +103,7 @@ p {
 
 /*/////////////Responsive////////////////*/
 
-@media screen and (min-width: 725px) {
+@media screen and (min-width: 900px) {
   .shipContainer {
     flex-direction: row;
   }
@@ -124,15 +124,27 @@ p {
     height: 55vh;
   }
 
+  .card > h2 {
+    font-size: 2rem;
+  }
+
+  .card > p {
+    font-size: 1.3rem;
+    width: 30vw;
+    text-align: center;
+  }
+
   .dateChoice {
     flex-direction: row;
     justify-content: space-evenly;
     align-items: flex-start;
   }
 
-  /* .validationButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
+  .datesContainer > p {
+    font-size: 1.3rem;
+  }
+
+  .price > p {
+    font-size: 1.3rem;
+  }
 }
