@@ -1,52 +1,58 @@
 import "./Reservation.css";
 
+import { useState } from "react";
+import ShuttleCards from "../../BDD/ShuttleCards";
+
 export default function Reservation() {
+  const [cardIndex, setCardIndex] = useState(0);
+  const handleClick = (event) => {
+    const infoIndex = parseInt(event.currentTarget.value, 10);
+    setCardIndex(infoIndex);
+  };
   return (
     <div>
       <h1>choose your shuttle</h1>
       <div className="shipContainer">
         <div className="shipCards">
           <article className="shipChoice">
-            <img
-              src="src/assets/images/pexels-pixabay-2159.webp"
-              alt=""
-              width="60px"
-            />
-            <h4>premium shuttle</h4>
+            <button value="0" onClick={handleClick} type="submit">
+              <img
+                src="src/assets/images/pexels-pixabay-2159.webp"
+                alt=""
+                width="60px"
+              />
+              <h4>{ShuttleCards[0].activTy}</h4>
+            </button>
           </article>
+
           <article className="shipChoice">
-            <img
-              src="src/assets/images/pexels-pixabay-2159.webp"
-              alt=""
-              width="60px"
-            />
-            <h4>pedalo shuttle</h4>
+            <button value="1" onClick={handleClick} type="submit">
+              <img
+                src="src/assets/images/pexels-pixabay-2159.webp"
+                alt=""
+                width="60px"
+              />
+              <h4>{ShuttleCards[1].activTy}</h4>
+            </button>
           </article>
+
           <article className="shipChoice">
-            <img
-              src="src/assets/images/pexels-pixabay-2159.webp"
-              alt=""
-              width="60px"
-            />
-            <h4>medium shuttle</h4>
+            <button value="2" onClick={handleClick} type="submit">
+              <img
+                src="src/assets/images/pexels-pixabay-2159.webp"
+                alt=""
+                width="60px"
+              />
+              <h4>{ShuttleCards[2].activTy}</h4>
+            </button>
           </article>
         </div>
 
         <div className="card">
-          <img
-            src="src/assets/images/pexels-pixabay-2159.webp"
-            alt=""
-            width="90px"
-          />
-          <h2>premium shuttle</h2>
-          <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos,
-            inventore. Incidunt adipisci natus numquam dolorum aperiam, sequi
-            vero, nihil sunt recusandae vitae nobis? Minus aspernatur cum
-            exercitationem quia ea quidem!
-          </p>
-          <p>price : 500 000 000 $</p>
-        </div>
+          {ShuttleCards[cardIndex].image}
+          <h2>{ShuttleCards[cardIndex].activTy}</h2>
+          <p>{ShuttleCards[cardIndex].description}</p>
+        </div> 
       </div>
 
       <div className="dateChoice">
@@ -57,7 +63,7 @@ export default function Reservation() {
 
         <div className="validationButton">
           <div className="price">
-            <p>price : 500 000 000 $</p>
+            <p>price : {ShuttleCards[cardIndex].price}</p>
           </div>
 
           <button type="button" className="reservationButton">
