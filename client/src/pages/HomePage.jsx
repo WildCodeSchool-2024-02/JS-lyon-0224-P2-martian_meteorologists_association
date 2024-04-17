@@ -11,8 +11,7 @@ function HomePage() {
   const weatherData = useLoaderData("API");
   const [currentWeather, setCurrentWeather] = useState(1);
   return (
-    <>
-      (
+    <div>
       <div className="mainPage">
         <div className="weather">
           <CurrentWeather
@@ -38,8 +37,7 @@ function HomePage() {
           </div>
         </div>
       </div>
-      )
-    </>
+    </div>
   );
 }
 

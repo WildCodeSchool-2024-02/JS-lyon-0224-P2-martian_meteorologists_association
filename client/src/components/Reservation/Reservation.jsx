@@ -52,7 +52,7 @@ export default function Reservation() {
           {ShuttleCards[cardIndex].image}
           <h2>{ShuttleCards[cardIndex].activTy}</h2>
           <p>{ShuttleCards[cardIndex].description}</p>
-        </div> 
+        </div>
       </div>
 
       <div className="dateChoice">
