@@ -16,7 +16,6 @@ const WeatherComponent = ({ setWeatherData }) => {
   useEffect(() => {
     fetchData(setWeatherData);
   }, [setWeatherData]);
-
 };
 
 export default WeatherComponent;
