@@ -49,10 +49,17 @@ export default function Reservation() {
         </div>
       </div>
 
-      <div className="buttons">
-        <button type="button">choose your dates</button>
-        <button type="button">validate</button>
+      <div className="dateChoice">
+        <label id="datesContainer">
+          <p>select your dates</p>
+          <input type="date" id="date" name="date" />
+        </label>
+
+        <button type="button" id="reservationButton">
+          <p>validate</p>
+        </button>
       </div>
+
       <div className="price">
         <p>500 000 000 $</p>
       </div>

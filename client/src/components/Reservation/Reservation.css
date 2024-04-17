@@ -21,17 +21,48 @@ h1 {
   flex-direction: column;
   background-color: rgba(217, 217, 217, 0.5);
   width: 85vw;
-  height: 40vh;
-  padding: 2vw;
-  margin: 7vw;
+  height: auto;
+  padding: 2vh;
   border-radius: 1.5rem;
+  margin-bottom: 4vh;
 }
 
-.buttons {
+.card > img,
+h2,
+p {
+  margin: 1vh;
+}
+
+.dateChoice {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+#datesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2vh;
+}
+#date {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  border: none;
+  padding: 1vw;
+  margin-bottom: 3vw;
+  border-radius: 1.5rem;
+}
+
+#reservationButton {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  border: none;
+  margin-bottom: 3vw;
+  border-radius: 1.5rem;
+  font-weight: bold;
 }
 
 .price {
@@ -44,7 +75,7 @@ h1 {
   flex-direction: column;
   background-color: rgba(217, 217, 217, 0.5);
   width: 30vw;
-  height: 20vh;
+  height: 15vh;
   border-radius: 1.5rem;
   align-items: center;
   justify-content: center;
