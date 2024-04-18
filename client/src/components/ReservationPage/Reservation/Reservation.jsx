@@ -2,7 +2,8 @@ import "./Reservation.css";
 
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import ShuttleCards from "../../BDD/ShuttleCards";
+import ShuttleCards from "../../../BDD/ShuttleCards";
+
 
 export default function Reservation() {
   const [cardIndex, setCardIndex] = useState(0);
@@ -90,6 +91,7 @@ export default function Reservation() {
             <NavLink to="/reservation/form">
               <p>Validate</p>
             </NavLink>
+
           </button>
         </div>
       </div>
