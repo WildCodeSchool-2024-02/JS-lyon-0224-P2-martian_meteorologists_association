@@ -51,18 +51,19 @@
 }
 
 /* Media Queries */
-@media screen and (min-width: 250px) and (max-width: 450px) {
-  /* .opacity {
+@media screen and (min-width: 250px) and (max-width: 360px) {
+  .opacity {
     width: auto;
-  } */
+  }
 
   .sunPositionContainer {
-    /* width: auto; */
+    width: auto;
     margin: 1rem 1rem;
   }
 
   .informationContainer {
     margin-bottom: 4rem;
+    width: auto;
   }
 
   .menuicon {

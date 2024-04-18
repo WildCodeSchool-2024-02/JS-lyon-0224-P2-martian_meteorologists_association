@@ -8,7 +8,6 @@ import HomePage from "./pages/HomePage";
 import ReservationPage from "./pages/ReservationPage";
 import fetchData from "./API/WeatherComponent";
 
-
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -17,7 +16,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
         loader: () => fetchData(),
-        id: "API" 
+        id: "API",
       },
       {
         path: "/reservation",
