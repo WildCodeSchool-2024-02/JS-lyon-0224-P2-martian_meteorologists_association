@@ -21,5 +21,4 @@ const ShuttleCards = [
     price: "$300 000 000",
   },
 ];
-
 export default ShuttleCards;

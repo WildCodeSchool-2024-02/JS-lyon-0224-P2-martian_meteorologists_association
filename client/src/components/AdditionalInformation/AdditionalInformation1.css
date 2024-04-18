@@ -41,6 +41,12 @@
 
 .menuicon > button > img {
   width: 60px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.menuicon > button > img:hover {
+  transform: scale(1.1);
 }
 
 .additionalh3 {
@@ -82,6 +88,7 @@
   }
 
   .informationContainer {
+    height: 45vh;
     display: flex;
     flex-direction: row;
     padding: 2vh;
@@ -114,6 +121,7 @@
 
 @media screen and (min-width: 1102px) {
   .informationContainer {
+    height: 45vh;
     margin: 3.5rem;
     margin-bottom: 11rem;
   }
