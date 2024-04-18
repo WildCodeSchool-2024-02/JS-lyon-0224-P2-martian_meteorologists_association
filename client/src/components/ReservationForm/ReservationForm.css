@@ -45,9 +45,9 @@ input {
   text-align: center;
 }
 
-img {
+.chosenShip > img {
   width: 80px;
-  height: 140px;
+  height: 100px;
 }
 
 .chosenShipContainer > h3,
