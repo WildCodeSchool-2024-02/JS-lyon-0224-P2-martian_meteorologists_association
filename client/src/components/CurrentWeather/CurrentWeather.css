@@ -5,7 +5,6 @@ body {
 
 .weatherLogo {
   width: 4rem;
-  /* padding: 0 4rem 0 2rem; */
 }
 
 .container {
@@ -22,6 +21,7 @@ body {
   width: 75vw;
   padding: 0.5em;
   margin-top: 2rem;
+  margin: auto;
   display: flex;
   justify-content: space-evenly;
 }
@@ -42,11 +42,7 @@ canvas {
   padding-top: 2rem;
 }
 
-@media screen and (min-width: 431px) {
-  /* .weatherLogo {
-    padding: 0 7rem 0 4rem;
-  } */
-
+@media screen and (min-width: 725px) {
   .container {
     flex-direction: row-reverse;
     justify-content: center;
@@ -56,8 +52,7 @@ canvas {
 
   .current_weather {
     margin-left: auto;
-    width: 60vw;
-    margin-right: 3rem;
+    width: 50vw;
   }
 
   .currentWeather_box {
@@ -76,6 +71,6 @@ canvas {
 
 @media screen and (min-width: 900px) {
   .current_weather {
-    margin-right: 7rem;
+    margin-right: auto;
   }
 }

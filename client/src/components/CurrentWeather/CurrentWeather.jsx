@@ -6,25 +6,31 @@ import Mars from "./Mars";
 import "./CurrentWeather.css";
 import WeatherLogo from "../../BDD/WeatherLogo";
 
-function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather, windSpeed, opacity, snowFall }) {
-
-  // Récupération de l'index météo du tableau weatherLogo en fonction des conditions météo
+function CurrentWeather({
+  currentTemperature,
+  currentWeather,
+  setCurrentWeather,
+  windSpeed,
+  opacity,
+  snowFall,
+}) {
+  // get index meteo from BDD Weather Logo
   useEffect(() => {
-      if (windSpeed > 60) {
-        setCurrentWeather(4);
-      } else if (opacity > 50) {
-        setCurrentWeather(0);
-      } else if (snowFall > 0) {
-        setCurrentWeather(2);
-      } else {
-        setCurrentWeather(1);
-      }
-})
+    if (windSpeed > 60) {
+      setCurrentWeather(4);
+    } else if (opacity > 50) {
+      setCurrentWeather(0);
+    } else if (snowFall > 0) {
+      setCurrentWeather(2);
+    } else {
+      setCurrentWeather(1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-// modification de la température la rendre plus martienne
   const temperatureMars = currentTemperature * -2;
 
-  // Récupération de la date
+  // Get date of the day
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
@@ -33,21 +39,20 @@ function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather,
   return (
     <div className="container">
       <div className="current_weather">
+        {/* change weather icon according to the weather */}
+        <img
+          src={WeatherLogo[currentWeather].imgSrc}
+          alt={WeatherLogo[currentWeather].name}
+          className="weatherLogo"
+        />
 
-        {/* changement de l'icon météo en fonction des conditions météo */}
-          <img
-            src={WeatherLogo[currentWeather].imgSrc}
-            alt={WeatherLogo[currentWeather].name}
-            className="weatherLogo"
-          />
-          
         <div className="currentWeather_box">
           <h2>{formattedDate}</h2>
           <p>{temperatureMars}°C</p>
         </div>
       </div>
 
-      {/* Planète Mars qui tourne */}
+      {/* rotating Mars */}
       <div className="mars">
         <Canvas>
           <ambientLight intensity={1.8} color="#ffffff" />
@@ -65,7 +70,6 @@ function CurrentWeather({ currentTemperature, currentWeather, setCurrentWeather,
     </div>
   );
 }
-
 
 // PropTypes validation
 CurrentWeather.propTypes = {

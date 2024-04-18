@@ -41,6 +41,12 @@
 
 .menuicon > button > img {
   width: 60px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.menuicon > button > img:hover {
+  transform: scale(1.1);
 }
 
 .additionalh3 {
@@ -51,7 +57,7 @@
 }
 
 /* Media Queries */
-@media screen and (min-width: 250px) and (max-width: 370px) {
+@media screen and (min-width: 250px) and (max-width: 360px) {
   .opacity {
     width: auto;
   }
@@ -62,7 +68,8 @@
   }
 
   .informationContainer {
-    width: 90vw;
+    margin-bottom: 4rem;
+    width: auto;
   }
 
   .menuicon {
@@ -70,7 +77,7 @@
   }
 }
 
-@media only screen and (min-width: 431px) {
+@media only screen and (min-width: 725px) {
   .menuicon > img {
     width: 60px;
   }
@@ -81,10 +88,13 @@
   }
 
   .informationContainer {
+    height: 45vh;
     display: flex;
     flex-direction: row;
     padding: 2vh;
-    margin: 3rem;
+    margin: 2rem;
+    margin-bottom: 25rem;
+    text-align: center;
   }
 
   .menulist {
@@ -111,6 +121,8 @@
 
 @media screen and (min-width: 1102px) {
   .informationContainer {
+    height: 45vh;
     margin: 3.5rem;
+    margin-bottom: 11rem;
   }
 }
