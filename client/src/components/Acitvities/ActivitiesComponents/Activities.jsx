@@ -45,7 +45,7 @@ function Activities() {
           </form>
         </div>
 
-        <div className="todoContainer">
+        <div className="todoContainer todoContainerVisibility">
           <h2>TO DO</h2>
           <article className="todoArticle">
             <h4>lorem</h4>

@@ -1,15 +1,14 @@
-h1 {
-  text-align: center;
-}
-
-/* form */
+/* global */
 
 .activitiesContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 4vh;
 }
+
+/* form */
 
 .activitiesForm {
   text-align: center;
@@ -26,8 +25,6 @@ h1 {
   border-radius: 1.5rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2vh;
-  margin-top: 4vh;
 }
 
 .activitieschoice {
@@ -53,6 +50,8 @@ h1 {
   background-color: rgba(217, 217, 217, 0.5);
   border: none;
   border-radius: 1.5rem;
+  margin-top: 2vh;
+  margin-bottom: 6vh;
 }
 
 .activitiesValidation > p {
@@ -69,9 +68,13 @@ h1 {
   align-items: center;
   width: 90vw;
   border-radius: 1.5rem;
-  margin-top: 6vh;
-  margin-bottom: 3vh;
   padding: 2vw;
+  margin-bottom: 2vh;
+  display: none;
+}
+
+.todoContainerVisibility {
+  display: flex;
 }
 
 .todoArticle {
@@ -93,4 +96,38 @@ h1 {
 
 .todoArticle > p {
   font-size: 1rem;
+}
+
+/*/////////////Responsive////////////////*/
+@media screen and (min-width: 725px) {
+  .activitiesContainer {
+    flex-direction: row;
+    align-items: unset;
+  }
+
+  .activitiesQuestion {
+    width: 52vw;
+    margin-right: 4vh;
+    height: 77vh;
+  }
+
+  .questionForm {
+    width: 46vw;
+    height: 7vh;
+  }
+
+  .activitiesValidation {
+    margin-bottom: 3vh;
+  }
+
+  .todoContainer {
+    width: 31vw;
+    height: 77vh;
+    margin: 0;
+  }
+
+  .todoArticle {
+    width: 26vw;
+    height: 20vh;
+  }
 }

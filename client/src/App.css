@@ -18,6 +18,7 @@
 body {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1,
