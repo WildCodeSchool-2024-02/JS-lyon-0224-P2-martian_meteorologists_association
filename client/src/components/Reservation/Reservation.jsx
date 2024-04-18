@@ -22,8 +22,8 @@ export default function Reservation() {
               className="selectShuttle"
             >
               <img
-                src="src/assets/images/pexels-pixabay-2159.webp"
-                alt=""
+                src={ShuttleCards[0].image}
+                alt={ShuttleCards[0].activTy}
                 width="60px"
               />
               <h4>{ShuttleCards[0].activTy}</h4>
@@ -38,8 +38,8 @@ export default function Reservation() {
               className="selectShuttle"
             >
               <img
-                src="src/assets/images/pexels-pixabay-2159.webp"
-                alt=""
+                src={ShuttleCards[1].image}
+                alt={ShuttleCards[1].activTy}
                 width="60px"
               />
               <h4>{ShuttleCards[1].activTy}</h4>
@@ -54,8 +54,8 @@ export default function Reservation() {
               className="selectShuttle"
             >
               <img
-                src="src/assets/images/pexels-pixabay-2159.webp"
-                alt=""
+                src={ShuttleCards[2].image}
+                alt={ShuttleCards[2].activTy}
                 width="60px"
               />
               <h4>{ShuttleCards[2].activTy}</h4>
