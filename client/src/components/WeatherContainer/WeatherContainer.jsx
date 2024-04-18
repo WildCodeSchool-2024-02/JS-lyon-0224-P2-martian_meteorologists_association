@@ -1,10 +1,10 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 import "./WeatherContainer.css";
 
-
-
 function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
-  const opacityMars = opacity * 3
+  const opacityMars = opacity * 3;
+  const slicedSunrise = sunrise.slice(11, 16);
+  const slicedSunset = sunset.slice(11, 16);
   return (
     <div className="weatherContainer">
       <div className="windSpeed">
@@ -16,7 +16,7 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
         <p>{windSpeed}km/h</p>
         <br />
       </div>
-      <div className="opasity">
+      <div className="opacity">
         <h3>
           Opacity
           <br />
@@ -29,12 +29,12 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
       <div className="sunPositionContainer">
         <div className="sunPosition">
           <h3>Sunset</h3>
-          <p>{sunset}</p>
+          <p>{slicedSunset}</p>
         </div>
         <span className="verticalBar" />
         <div className="sunPosition">
           <h3>Sunrise</h3>
-          <p>{sunrise}</p>
+          <p>{slicedSunrise}</p>
         </div>
       </div>
     </div>
@@ -43,7 +43,7 @@ function WeatherContainer({ windSpeed, opacity, sunrise, sunset }) {
 WeatherContainer.propTypes = {
   windSpeed: PropTypes.number.isRequired,
   opacity: PropTypes.number.isRequired,
-  sunrise: PropTypes.number.isRequired,
-  sunset: PropTypes.number.isRequired,
+  sunrise: PropTypes.string.isRequired,
+  sunset: PropTypes.string.isRequired,
 };
 export default WeatherContainer;

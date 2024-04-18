@@ -14,6 +14,7 @@ export default function Model(props) {
   const { nodes, materials } = useLoader(GLTFLoader, "/src/public/mars.gltf");
 
   return (
+    // eslint-disable-next-line react/jsx-props-no-spreading
     <group {...props} dispose={null}>
       <mesh
         geometry={nodes.Object_2.geometry}

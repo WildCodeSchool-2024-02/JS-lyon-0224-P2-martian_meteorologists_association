@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "victorMono";
   src: url("./assets/fonts/VictorMono-VariableFont_wght.ttf") format("opentype");
@@ -9,29 +15,23 @@
   --container-color: #d9d9d9;
 }
 
-body {
+html {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
-  height: 100%;
-}
-
-.mainPage {
-  padding: 1em;
 }
 
 h1,
 h2,
 h3,
-p {
+h4,
+p,
+a {
   font-family: "victorMono";
   color: white;
   margin: 0;
 }
 
-@media screen and (min-width: 431px) {
-  html {
-    height: 100%;
-  }
+@media screen and (min-width: 725px) {
   .mainPage {
     display: flex;
     flex-direction: column;

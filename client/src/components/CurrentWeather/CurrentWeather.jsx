@@ -1,24 +1,36 @@
+import { Suspense, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
-
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
-import "./ActualWeather.css";
+import "./CurrentWeather.css";
+import WeatherLogo from "../../BDD/WeatherLogo";
 
-const weatherLogo = [
-  {
-    name: "cloud",
-    imgSrc: "./src/assets/weatherLogo/cloud.svg",
-  },
-  {
-    name: "sun",
-    imgSrc: "./assets/weatherLogo/sun.svg",
-  },
-];
+function CurrentWeather({
+  currentTemperature,
+  currentWeather,
+  setCurrentWeather,
+  windSpeed,
+  opacity,
+  snowFall,
+}) {
+  // get index meteo from BDD Weather Logo
+  useEffect(() => {
+    if (windSpeed > 60) {
+      setCurrentWeather(4);
+    } else if (opacity > 50) {
+      setCurrentWeather(0);
+    } else if (snowFall > 0) {
+      setCurrentWeather(2);
+    } else {
+      setCurrentWeather(1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-function ActualWeather({ currentTemperature }) {
   const temperatureMars = currentTemperature * -2;
+
+  // Get date of the day
   const currentDate = new Date();
   const day = currentDate.getDate();
   const month = currentDate.getMonth(); // getMonth() returns a 0-based month value (0 for January, 1 for February, and so on)
@@ -27,16 +39,20 @@ function ActualWeather({ currentTemperature }) {
   return (
     <div className="container">
       <div className="current_weather">
+        {/* change weather icon according to the weather */}
         <img
+          src={WeatherLogo[currentWeather].imgSrc}
+          alt={WeatherLogo[currentWeather].name}
           className="weatherLogo"
-          src={weatherLogo[0].imgSrc}
-          alt="cloud logo"
         />
+
         <div className="currentWeather_box">
           <h2>{formattedDate}</h2>
           <p>{temperatureMars}°C</p>
         </div>
       </div>
+
+      {/* rotating Mars */}
       <div className="mars">
         <Canvas>
           <ambientLight intensity={1.8} color="#ffffff" />
@@ -51,22 +67,18 @@ function ActualWeather({ currentTemperature }) {
           </Suspense>
         </Canvas>
       </div>
-
-      {/* <Canvas>
-        <ambientLight />
-        <OrbitControls enableZoom={false} autoRotate={true} enablePan={false} enableRotate={false} />  
-        
-          <Mars position={[0, 0, 0]} />
-        
-        <Environment preset='sunset' />
-        <ContactShadows opacity={0.5} scale={10} blur={1} far={10} resolution={256} color={'#000000'} />
-        
-      </Canvas> */}
     </div>
   );
 }
 
-ActualWeather.propTypes = {
+// PropTypes validation
+CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
+  currentWeather: PropTypes.number.isRequired,
+  setCurrentWeather: PropTypes.func.isRequired,
+  opacity: PropTypes.number.isRequired,
+  windSpeed: PropTypes.number.isRequired,
+  snowFall: PropTypes.number.isRequired,
 };
-export default ActualWeather;
+
+export default CurrentWeather;
