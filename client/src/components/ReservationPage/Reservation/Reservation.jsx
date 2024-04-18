@@ -1,7 +1,7 @@
 import "./Reservation.css";
 
 import { useState } from "react";
-import ShuttleCards from "../../BDD/ShuttleCards";
+import ShuttleCards from "../../../BDD/ShuttleCards";
 
 export default function Reservation() {
   const [cardIndex, setCardIndex] = useState(0);

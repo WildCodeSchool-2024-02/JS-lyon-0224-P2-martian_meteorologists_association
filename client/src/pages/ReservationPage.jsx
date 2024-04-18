@@ -1,4 +1,4 @@
-import Reservation from "../components/Reservation/Reservation";
+import Reservation from "../components/ReservationPage/Reservation/Reservation";
 
 export default function ReservationPage() {
   return (
