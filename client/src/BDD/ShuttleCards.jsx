@@ -1,23 +1,23 @@
 const ShuttleCards = [
   {
-    activTy: "Premium Shuttle",
+    activTy: "Premium Express",
     image: "src/assets/images/Premium_shuttle.png",
     description:
-      "Premium shuttle, with a pool and airconditioning. You'll be able to relax for the 9 months of your travel.",
+      "SPA and room service included, you will relax and enjoy during 6 months of travel.",
     price: "$500 000 000",
   },
   {
-    activTy: "Medium Shuttle",
-    image: "src/assets/images/Medium_shuttle.png",
+    activTy: "Classic",
+    image: "src/assets/images/Classic_shuttle.png",
     description:
-      "Just stay on your seats for the whole trip, an okay trip that you won't hate nor enjoy very much.",
+      "Comfortable seats and a nice view are guaranteed. 9 months of travel. Enough time for self-development .",
     price: "$450 000 000",
   },
   {
-    activTy: "Pedalo Shuttle",
+    activTy: "Pedalo",
     image: "src/assets/images/Pedalo_shuttle.png",
     description:
-      "Pedal your way to Mars ! You'll have the perfect legs for your trip on Mars. We do not take any responsability for your safety on this trip, choose carefully",
+      "Be prepared for a long journey. Pedal your way to Mars ! You'll have the perfect legs for your trip. We do not take any responsability for your safety on this trip, choose carefully",
     price: "$300 000 000",
   },
 ];
