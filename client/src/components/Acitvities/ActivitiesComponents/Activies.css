@@ -12,25 +12,30 @@ h1 {
 }
 
 .activitiesForm {
-  width: 60vw;
   text-align: center;
+  font-size: 1.35rem;
 }
 
 .activitiesQuestion {
   display: flex;
   flex-direction: column;
   background-color: rgba(217, 217, 217, 0.5);
-  width: 55vw;
+  width: 90vw;
   height: 40vh;
-  margin: 2vw;
   padding: 2vw;
   border-radius: 1.5rem;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2vh;
+  margin-top: 4vh;
 }
 
 .activitieschoice {
-  margin: 2vh;
+  margin-top: 2.5vh;
+}
+
+.activitieschoice select {
+  font-size: 1rem;
 }
 
 .questionForm {
@@ -39,7 +44,7 @@ h1 {
   color: var(--secondary-color);
   padding: 1vw;
   border-radius: 1.5rem;
-  width: 50vw;
+  width: 85vw;
   text-align: center;
   margin-top: 1vh;
 }
@@ -56,3 +61,36 @@ h1 {
 }
 
 /* to do */
+.todoContainer {
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  border-radius: 1.5rem;
+  margin-top: 6vh;
+  margin-bottom: 3vh;
+  padding: 2vw;
+}
+
+.todoArticle {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  margin: 1vh;
+  width: 85vw;
+  height: 7vh;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoArticle > h4,
+.todoArticle > p {
+  color: var(--secondary-color);
+}
+
+.todoArticle > p {
+  font-size: 1rem;
+}
