@@ -1,30 +1,33 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
+
 import "./AdditionalInformation1.css";
 import FunFacts from "../../BDD/FunFacts";
+import WeatherLogo from "../../BDD/WeatherLogo";
 
-function AdditionalInformation() {
+function AdditionalInformation({ CurrentWeather }) {
   const randomIndex = Math.floor(Math.random() * FunFacts.length);
   const [containerIndex, setContainerIndex] = useState(0);
 
-  const obj = [
+  const information = [
     {
       title: "Did you know",
       text: FunFacts[randomIndex],
     },
     {
       title: "What to wear?",
-      text: "clothes",
+      text: WeatherLogo[CurrentWeather].clothes,
     },
     {
       title: "What to do?",
-      text: "stuff",
+      text: WeatherLogo[CurrentWeather].activity,
     },
   ];
 
-
+  // Modification de l'index du tableau Information en fonction du bouton cliqué
   const handleClick = (event) => {
-    const test = parseInt(event.currentTarget.value, 10);
-    setContainerIndex(test);
+    const infoIndex = parseInt(event.currentTarget.value, 10);
+    setContainerIndex(infoIndex);
   };
 
   return (
@@ -51,12 +54,16 @@ function AdditionalInformation() {
         </div>
 
         <div className="textContainer">
-          <h3 className="additionalh3">{obj[containerIndex].title}</h3>
-          <p className="additionalp">{obj[containerIndex].text}</p>
+          <h3 className="additionalh3">{information[containerIndex].title}</h3>
+          <p className="additionalp">{information[containerIndex].text}</p>
         </div>
       </div>
     </div>
   );
 }
+
+AdditionalInformation.propTypes = {
+  CurrentWeather: PropTypes.string.isRequired,
+};
 
 export default AdditionalInformation;
