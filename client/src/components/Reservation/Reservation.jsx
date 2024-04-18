@@ -1,6 +1,7 @@
 import "./Reservation.css";
 
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import ShuttleCards from "../../BDD/ShuttleCards";
 
 export default function Reservation() {
@@ -11,7 +12,7 @@ export default function Reservation() {
   };
   return (
     <div>
-      <h1>choose your shuttle</h1>
+      <h1>Choose your shuttle</h1>
       <div className="shipContainer">
         <div className="shipCards">
           <article className="shipChoice">
@@ -86,7 +87,9 @@ export default function Reservation() {
           </div>
 
           <button type="button" className="reservationButton">
-            <p>validate</p>
+            <NavLink to="/reservation/form">
+              <p>Validate</p>
+            </NavLink>
           </button>
         </div>
       </div>

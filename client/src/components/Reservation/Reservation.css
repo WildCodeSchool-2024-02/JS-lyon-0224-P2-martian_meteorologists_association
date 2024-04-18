@@ -30,6 +30,10 @@ h1 {
   text-align: center;
 }
 
+.shipChoice:hover {
+  background-color: rgba(217, 217, 217, 0.8);
+}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -60,6 +64,7 @@ p {
 
 .selectShuttle > img {
   width: 100px;
+  cursor: pointer;
 }
 
 /* dates Selection */
@@ -86,6 +91,11 @@ p {
   border: none;
   border-radius: 1.5rem;
   padding: 1vh;
+  cursor: pointer;
+}
+
+.date:hover {
+  background-color: rgba(217, 217, 217, 0.8);
 }
 
 .validationButton {
@@ -104,6 +114,15 @@ p {
   border-radius: 1.5rem;
   font-weight: bold;
   font-size: large;
+}
+
+.reservationButton > a {
+  text-decoration: none;
+  border-radius: 1.5rem;
+}
+
+.reservationButton > a:hover {
+  background-color: rgba(217, 217, 217, 0.5);
 }
 
 .price {

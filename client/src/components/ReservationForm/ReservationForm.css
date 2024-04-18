@@ -1,0 +1,8 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.chosenShip {
+  background-color: rgba(217, 217, 217, 0.5);
+}
