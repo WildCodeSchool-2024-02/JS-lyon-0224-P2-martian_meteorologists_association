@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./CurrentWeather.css";
-import WeatherLogo from "../../BDD/WeatherLogo";
+import WeatherLogo from "../../../BDD/WeatherLogo";
 
 function CurrentWeather({
   currentTemperature,

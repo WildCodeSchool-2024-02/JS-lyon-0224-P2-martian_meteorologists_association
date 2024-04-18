@@ -2,8 +2,8 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 
 import "./AdditionalInformation1.css";
-import FunFacts from "../../BDD/FunFacts";
-import WeatherLogo from "../../BDD/WeatherLogo";
+import FunFacts from "../../../BDD/FunFacts";
+import WeatherLogo from "../../../BDD/WeatherLogo";
 
 function AdditionalInformation({ CurrentWeather }) {
   const randomIndex = Math.floor(Math.random() * FunFacts.length);
