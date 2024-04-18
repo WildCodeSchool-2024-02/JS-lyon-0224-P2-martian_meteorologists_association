@@ -1,0 +1,58 @@
+h1 {
+  text-align: center;
+}
+
+/* form */
+
+.activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.activitiesForm {
+  width: 60vw;
+  text-align: center;
+}
+
+.activitiesQuestion {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 55vw;
+  height: 40vh;
+  margin: 2vw;
+  padding: 2vw;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.activitieschoice {
+  margin: 2vh;
+}
+
+.questionForm {
+  background-color: var(--container-color);
+  border: none;
+  color: var(--secondary-color);
+  padding: 1vw;
+  border-radius: 1.5rem;
+  width: 50vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.activitiesValidation {
+  background-color: rgba(217, 217, 217, 0.5);
+  border: none;
+  border-radius: 1.5rem;
+}
+
+.activitiesValidation > p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* to do */

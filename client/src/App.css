@@ -15,7 +15,7 @@
   --container-color: #d9d9d9;
 }
 
-html {
+body {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
 }
@@ -25,6 +25,7 @@ h2,
 h3,
 h4,
 p,
+select,
 a {
   font-family: "victorMono";
   color: white;
