@@ -6,15 +6,6 @@ export default function ReservationForm() {
     <div>
       <h1>Reservation form</h1>
       <div className="formContainer">
-        <div className="chosenShip">
-          <img
-            src="../src/assets/images/Premium_shuttle.png"
-            alt="ShuttleCard"
-            width="60px"
-          />
-          <h3>Your shuttle</h3>
-          <p>price:$500 000 000</p>
-        </div>
         <div className="personalDetailsContainer">
           <form id="inputForm">
             <label>
@@ -30,8 +21,20 @@ export default function ReservationForm() {
               <input type="email" name="user_email" />
             </label>
           </form>
+          <div className="chosenShipContainer">
+            <div className="chosenShip">
+              <img
+                src="../src/assets/images/Premium_shuttle.png"
+                alt="ShuttleCard"
+              />
+            </div>
+            <h3>Your shuttle</h3>
+            <p>price:$500 000 000</p>
+          </div>
         </div>
-        <input className="validateBtn" type="submit" value="Validate" />
+        <button type="submit" className="validateBtn">
+          Validate
+        </button>
       </div>
     </div>
   );
