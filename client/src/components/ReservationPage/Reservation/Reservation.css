@@ -43,6 +43,11 @@ h1 {
   align-items: center;
 }
 
+canvas {
+  width: 80vw !important;
+  height: 45vh !important;
+}
+
 .card > img,
 h2,
 p {
@@ -135,7 +140,6 @@ p {
 
   .card {
     width: 55vw;
-    height: 55vh;
   }
 
   .card > h2 {
@@ -147,6 +151,10 @@ p {
     text-align: center;
   }
 
+  canvas {
+    width: 53vw !important;
+    height: 45vh !important;
+  }
   .dateChoice {
     flex-direction: row;
     justify-content: space-evenly;
