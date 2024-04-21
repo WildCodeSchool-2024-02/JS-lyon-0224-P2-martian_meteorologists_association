@@ -30,6 +30,7 @@ label {
 input {
   background-color: #d9d9d9;
   color: #8d3300;
+  font-weight: bold;
   border-radius: 1.5rem;
   padding: 0.5rem;
   margin: 0.5rem 0;
