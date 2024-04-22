@@ -62,7 +62,7 @@ function CurrentWeather({
 
       {/* rotating Mars */}
       <div className="mars">
-        <Canvas>
+        <Canvas className="marsPlanet">
           <ambientLight intensity={1.8} color="#ffffff" />
           <OrbitControls
             enableZoom={false}
