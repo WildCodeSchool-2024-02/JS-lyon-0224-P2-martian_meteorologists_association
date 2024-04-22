@@ -72,6 +72,7 @@ export default function Reservation() {
         <div className="card">
           <div className="suttle3d">
             <Canvas
+              className="canva3d"
               camera={{ position: [-15, 5, -10] }} // Set initial camera position for zoom
               gl={{ antialias: true }}
             >
