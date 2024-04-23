@@ -1,11 +1,9 @@
 import "./Reservation.css";
-
-import { useState } from "react";
+import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation() {
-  const [cardIndex, setCardIndex] = useState(0);
+export default function Reservation({ cardIndex, setCardIndex }) {
   const handleClick = (event) => {
     const infoIndex = parseInt(event.currentTarget.value, 10);
     setCardIndex(infoIndex);
@@ -96,3 +94,8 @@ export default function Reservation() {
     </div>
   );
 }
+
+Reservation.propTypes = {
+  cardIndex: PropTypes.number.isRequired,
+  setCardIndex: PropTypes.func.isRequired,
+};

@@ -1,7 +1,8 @@
 import "./ReservationForm.css";
-// import ShuttleCards from "../../BDD/ShuttleCards";
+import PropTypes from "prop-types";
+import ShuttleCards from "../../BDD/ShuttleCards";
 
-export default function ReservationForm() {
+export default function ReservationForm({ cardIndex }) {
   return (
     <div>
       <h1>Reservation form</h1>
@@ -23,13 +24,10 @@ export default function ReservationForm() {
           </form>
           <div className="chosenShipContainer">
             <div className="chosenShip">
-              <img
-                src="../src/assets/images/Premium_shuttle.png"
-                alt="ShuttleCard"
-              />
+              <img src={ShuttleCards[cardIndex].image} alt="ShuttleCard" />
             </div>
-            <h3>Your shuttle</h3>
-            <p>price:$500 000 000</p>
+            <h3>{ShuttleCards[cardIndex].activTy}</h3>
+            <p>{ShuttleCards[cardIndex].price}</p>
           </div>
         </div>
         <button type="submit" className="validateBtn">
@@ -39,3 +37,7 @@ export default function ReservationForm() {
     </div>
   );
 }
+
+ReservationForm.propTypes = {
+  cardIndex: PropTypes.number.isRequired,
+};
