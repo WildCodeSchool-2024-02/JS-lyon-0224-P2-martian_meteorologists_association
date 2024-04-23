@@ -23,10 +23,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[0].image}
-                alt={ShuttleCards[0].activTy}
+                alt={ShuttleCards[0].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[0].activTy}</h4>
+              <h4>{ShuttleCards[0].name}</h4>
             </button>
           </article>
 
@@ -39,10 +39,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[1].image}
-                alt={ShuttleCards[1].activTy}
+                alt={ShuttleCards[1].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[1].activTy}</h4>
+              <h4>{ShuttleCards[1].name}</h4>
             </button>
           </article>
 
@@ -55,10 +55,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[2].image}
-                alt={ShuttleCards[2].activTy}
+                alt={ShuttleCards[2].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[2].activTy}</h4>
+              <h4>{ShuttleCards[2].name}</h4>
             </button>
           </article>
         </div>
@@ -66,10 +66,10 @@ export default function Reservation() {
         <div className="card">
           <img
             src={ShuttleCards[cardIndex].image}
-            alt={ShuttleCards[cardIndex].activTy}
+            alt={ShuttleCards[cardIndex].name}
           />
 
-          <h2>{ShuttleCards[cardIndex].activTy}</h2>
+          <h2>{ShuttleCards[cardIndex].name}</h2>
           <p>{ShuttleCards[cardIndex].description}</p>
         </div>
       </div>
