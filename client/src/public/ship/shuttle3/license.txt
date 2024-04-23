@@ -1,11 +1,11 @@
 Model Information:
-* title:	spaceship "torb" v2
-* source:	https://sketchfab.com/3d-models/spaceship-torb-v2-832049eab0cf4342a24223d71bc9642c
-* author:	tramkar (https://sketchfab.com/tramkar)
+* title:	Colony Tactical Ship
+* source:	https://sketchfab.com/3d-models/colony-tactical-ship-050dae751a404f3087aac9241958e2b1
+* author:	Rakshaan (https://sketchfab.com/rakshaan)
 
 Model License:
 * license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
 * requirements:	Author must be credited. Commercial use is allowed.
 
 If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
-This work is based on "spaceship "torb" v2" (https://sketchfab.com/3d-models/spaceship-torb-v2-832049eab0cf4342a24223d71bc9642c) by tramkar (https://sketchfab.com/tramkar) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+This work is based on "Colony Tactical Ship" (https://sketchfab.com/3d-models/colony-tactical-ship-050dae751a404f3087aac9241958e2b1) by Rakshaan (https://sketchfab.com/rakshaan) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

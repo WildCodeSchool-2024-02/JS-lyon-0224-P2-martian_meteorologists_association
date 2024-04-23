@@ -3,9 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-// import Pedalo from "./Pedalo";
-// import Classic from "./Classic";
-// import Premuim from "./Premuim";
+
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
 export default function Reservation() {

@@ -22,193 +22,193 @@ export default function Model(props) {
         geometry={nodes["polySurface551_������������_1_0"].geometry}
         material={materials.material}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_0"].geometry}
         material={materials.material_1}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551__��������������2_0"].geometry}
         material={materials.material_2}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������������_0"].geometry}
         material={materials.material_3}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551__��������_2_0"].geometry}
         material={materials.material_4}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_3_0"].geometry}
         material={materials.material_5}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������������_2_0"].geometry}
         material={materials.material_6}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes.polySurface551_lambert10_0.geometry}
         material={materials.lambert10}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_����������_0"].geometry}
         material={materials.material_8}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������_0"].geometry}
         material={materials.material_9}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551__��������_3_0"].geometry}
         material={materials.material_10}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������������_0_1"].geometry}
         material={materials.material_11}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_����������_0_1"].geometry}
         material={materials.material_12}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_3_0_1"].geometry}
         material={materials.material_13}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_4_0"].geometry}
         material={materials.material_14}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_0_1"].geometry}
         material={materials.material_15}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_2_0"].geometry}
         material={materials.material_16}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������������3_0"].geometry}
         material={materials.material_17}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������������_0_2"].geometry}
         material={materials.material_18}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_2_0_1"].geometry}
         material={materials.material_19}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_��������_0_1"].geometry}
         material={materials.material_20}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_2_0_2"].geometry}
         material={materials.material_21}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������������_0"].geometry}
         material={materials.material_22}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_2_0_3"].geometry}
         material={materials.material_23}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_0_2"].geometry}
         material={materials.material_24}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_0_3"].geometry}
         material={materials.material_25}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes.polySurface551_lambert6_0.geometry}
         material={materials.lambert6}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_0_4"].geometry}
         material={materials.material_27}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_2_0_4"].geometry}
         material={materials.material_28}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes.polySurface551_lambert1_0.geometry}
         material={materials.lambert1}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes["polySurface551_������������_1_0_1"].geometry}
         material={materials.material_30}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
       <mesh
         geometry={nodes.polySurface551_blinn2_0.geometry}
         material={materials.blinn2}
         position={[0, -4, 0]}
-        scale={2.5}
+        scale={2.33}
       />
     </group>
   );
