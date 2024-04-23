@@ -29,12 +29,15 @@ function CurrentWeather({
       case snowFall > 0:
         setCurrentWeather(2);
         break;
+      case (windSpeed > 60 && opacity > 50) || (snowFall > 0 && windSpeed > 60):
+        setCurrentWeather(3);
+        break;
       default:
         setCurrentWeather(day === "day" ? 1 : 5);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [windSpeed, opacity, snowFall, isDay]);
 
   const temperatureMars = currentTemperature * -2;
 
