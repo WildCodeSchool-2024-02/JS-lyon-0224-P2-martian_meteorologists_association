@@ -1,10 +1,11 @@
-import { Suspense, useEffect } from "react";
+import { Suspense} from "react";
 import PropTypes from "prop-types";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./CurrentWeather.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
+import WeatherIndex from "../../WeatherIndex1";
 
 function CurrentWeather({
   currentTemperature,
@@ -14,19 +15,8 @@ function CurrentWeather({
   opacity,
   snowFall,
 }) {
-  // get index meteo from BDD Weather Logo
-  useEffect(() => {
-    if (windSpeed > 60) {
-      setCurrentWeather(4);
-    } else if (opacity > 50) {
-      setCurrentWeather(0);
-    } else if (snowFall > 0) {
-      setCurrentWeather(2);
-    } else {
-      setCurrentWeather(1);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+
+  <WeatherIndex windSpeed={windSpeed} opacity={opacity} snowFall={snowFall} setCurrentWeather={setCurrentWeather}/>
 
   const temperatureMars = currentTemperature * -2;
 
