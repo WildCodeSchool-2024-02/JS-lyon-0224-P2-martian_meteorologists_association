@@ -5,19 +5,12 @@ import { OrbitControls } from "@react-three/drei";
 import Mars from "./Mars";
 import "./CurrentWeather.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
-import WeatherIndex from "../../WeatherIndex1";
 
 function CurrentWeather({
   currentTemperature,
   currentWeather,
-  setCurrentWeather,
-  windSpeed,
-  opacity,
-  snowFall,
-  isDay,
 }) {
 
-  <WeatherIndex windSpeed={windSpeed} opacity={opacity} snowFall={snowFall} setCurrentWeather={setCurrentWeather} isDay={isDay}/>
 
   const temperatureMars = currentTemperature * -2;
 
@@ -66,11 +59,6 @@ function CurrentWeather({
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
   currentWeather: PropTypes.number.isRequired,
-  setCurrentWeather: PropTypes.func.isRequired,
-  opacity: PropTypes.number.isRequired,
-  windSpeed: PropTypes.number.isRequired,
-  snowFall: PropTypes.number.isRequired,
-  isDay: PropTypes.number.isRequired,
 };
 
 export default CurrentWeather;

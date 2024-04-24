@@ -3,16 +3,15 @@ import PropTypes from "prop-types";
 import "./Activies.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
 import Activities from "../../../BDD/Activities";
-import WeatherIndex from "../../WeatherIndex1";
+// import WeatherIndex from "../../WeatherIndex1";
 
-function ActivitiesChoice({ currentWeather, windSpeed, opacity, snowfall, setCurrentWeather, isDay}  ) {
+function ActivitiesChoice({ currentWeather} ) {
   const [feelValue, setFeelValue] = useState("discovery");
   const [sportValue, setSportValue] = useState("sportYes");
   const [randomIndexes, setRandomIndexes] = useState([0, 1, 2]);
   const [filteredActivities, setFilteredActivities] = useState(Activities);
   const [visibility, setVisibility] = useState("");
 
-  <WeatherIndex windSpeed={windSpeed} opacity={opacity} snowFall={snowfall} setCurrentWeather={setCurrentWeather} isDay={isDay}/>
 
   // modification Onchange
   const handleFeelChange = (event) => {
@@ -121,11 +120,11 @@ function ActivitiesChoice({ currentWeather, windSpeed, opacity, snowfall, setCur
 
 ActivitiesChoice.propTypes = {
   currentWeather: PropTypes.number.isRequired,
-  windSpeed: PropTypes.number.isRequired,
-  opacity: PropTypes.number.isRequired,
-  snowfall: PropTypes.number.isRequired,
-  setCurrentWeather: PropTypes.number.isRequired,
-  isDay: PropTypes.number.isRequired,
+  // windSpeed: PropTypes.number.isRequired,
+  // opacity: PropTypes.number.isRequired,
+  // snowfall: PropTypes.number.isRequired,
+  // setCurrentWeather: PropTypes.number.isRequired,
+  // isDay: PropTypes.number.isRequired,
 };
 
 export default ActivitiesChoice;

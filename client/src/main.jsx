@@ -6,7 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import HomePage from "./pages/HomePage";
 import ReservationPage from "./pages/ReservationPage";
-import fetchData from "./API/WeatherComponent";
+// import fetchData from "./API/WeatherComponent";
 import ActivitiesPage from "./pages/ActivitiesPage";
 
 const router = createBrowserRouter([
@@ -16,8 +16,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <HomePage />,
-        loader: () => fetchData(),
-        id: "API",
+        // loader: () => fetchData(),
+        // id: "API",
       },
       {
         path: "/reservation",
@@ -26,8 +26,8 @@ const router = createBrowserRouter([
       {
         path: "/activities",
         element: <ActivitiesPage />,
-        loader: () => fetchData(),
-        id: "API2",
+        // loader: () => fetchData(),
+        // id: "API2",
       },
     ],
   },

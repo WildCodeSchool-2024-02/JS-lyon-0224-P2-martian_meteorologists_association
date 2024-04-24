@@ -1,29 +1,23 @@
-import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
-
+import { useContext } from "react";
 import "../App.css";
-
-import WeatherContainer from "../components/HomePage/WeatherContainer/WeatherContainer";
+import { IndexCurrentWeather } from "../Contexts/IndexCurrentWeather";
 import CurrentWeather from "../components/HomePage/CurrentWeather/CurrentWeather";
+import WeatherContainer from "../components/HomePage/WeatherContainer/WeatherContainer";
 import AdditionalInformation from "../components/HomePage/AdditionalInformation/AdditionalInformation";
-// import IndexCurrentWeather from "../Contexts/IndexCurrentWeather";
 
 function HomePage() {
-  const weatherData = useLoaderData("API");
-  const [currentWeather, setCurrentWeather] = useState(1);
-  // const [currentWeather, setCurrentWeather] = useState(1);
-  // const { currentWeather, setCurrentWeather } = useContext(IndexCurrentWeather);
+  const { weatherData, currentWeather } = useContext(IndexCurrentWeather);
+
+  if (!weatherData) {
+    return <div>Loading...</div>;
+  }
+
   return (
     <div className="mainPage">
       <div className="weather">
         <CurrentWeather
           currentTemperature={weatherData.current.temperature_2m}
-          windSpeed={weatherData.current.wind_speed_10m}
-          opacity={weatherData.current.cloud_cover}
-          snowFall={weatherData.current.snowfall}
           currentWeather={currentWeather}
-          setCurrentWeather={setCurrentWeather}
-          isDay={weatherData.current.is_day}
         />
       </div>
 
