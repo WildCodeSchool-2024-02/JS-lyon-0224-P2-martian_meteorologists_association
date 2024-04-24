@@ -23,6 +23,7 @@ function HomePage() {
           snowFall={weatherData.current.snowfall}
           currentWeather={currentWeather}
           setCurrentWeather={setCurrentWeather}
+          isDay={weatherData.current.is_day}
         />
       </div>
 

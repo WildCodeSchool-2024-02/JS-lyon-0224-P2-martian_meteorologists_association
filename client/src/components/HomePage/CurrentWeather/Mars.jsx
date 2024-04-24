@@ -11,7 +11,10 @@ import { useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 
 export default function Model(props) {
-  const { nodes, materials } = useLoader(GLTFLoader, "/src/public/mars.gltf");
+  const { nodes, materials } = useLoader(
+    GLTFLoader,
+    "/src/public/Mars/mars.gltf"
+  );
 
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading

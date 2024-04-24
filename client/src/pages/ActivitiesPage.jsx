@@ -18,7 +18,8 @@ export default function ActivitiesPage() {
       windSpeed={weatherData.current.wind_speed_10m} 
       opacity={weatherData.current.cloud_cover}
       snowfall={weatherData.current.snowfall}
-      setCurrentWeather={setCurrentWeather}/>
+      setCurrentWeather={setCurrentWeather}
+      isDay={weatherData.current.is_day}/>
     </div>
   );
 }

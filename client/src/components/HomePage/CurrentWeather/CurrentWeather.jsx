@@ -14,9 +14,10 @@ function CurrentWeather({
   windSpeed,
   opacity,
   snowFall,
+  isDay,
 }) {
 
-  <WeatherIndex windSpeed={windSpeed} opacity={opacity} snowFall={snowFall} setCurrentWeather={setCurrentWeather}/>
+  <WeatherIndex windSpeed={windSpeed} opacity={opacity} snowFall={snowFall} setCurrentWeather={setCurrentWeather} isDay={isDay}/>
 
   const temperatureMars = currentTemperature * -2;
 
@@ -44,7 +45,7 @@ function CurrentWeather({
 
       {/* rotating Mars */}
       <div className="mars">
-        <Canvas>
+        <Canvas className="marsPlanet">
           <ambientLight intensity={1.8} color="#ffffff" />
           <OrbitControls
             enableZoom={false}
@@ -69,6 +70,7 @@ CurrentWeather.propTypes = {
   opacity: PropTypes.number.isRequired,
   windSpeed: PropTypes.number.isRequired,
   snowFall: PropTypes.number.isRequired,
+  isDay: PropTypes.number.isRequired,
 };
 
 export default CurrentWeather;
