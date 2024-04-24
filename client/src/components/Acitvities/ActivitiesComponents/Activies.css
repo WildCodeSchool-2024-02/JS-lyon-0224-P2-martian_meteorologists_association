@@ -1,0 +1,134 @@
+/* global */
+
+.activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4vh;
+}
+
+/* form */
+
+.activitiesForm {
+  text-align: center;
+  font-size: 1.35rem;
+}
+
+.activitiesQuestion {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 90vw;
+  height: 40vh;
+  padding: 2vw;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.activitieschoice {
+  margin-top: 2.5vh;
+}
+
+.activitieschoice select {
+  font-size: 1rem;
+}
+
+.questionForm {
+  background-color: var(--container-color);
+  border: none;
+  color: var(--secondary-color);
+  padding: 1vw;
+  border-radius: 1.5rem;
+  width: 85vw;
+  text-align: center;
+  margin-top: 1vh;
+}
+
+.activitiesValidation {
+  background-color: rgba(217, 217, 217, 0.5);
+  border: none;
+  border-radius: 1.5rem;
+  margin-top: 2vh;
+  margin-bottom: 6vh;
+}
+
+.activitiesValidation > p {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* to do */
+.todoContainer {
+  background-color: rgba(217, 217, 217, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90vw;
+  border-radius: 1.5rem;
+  padding: 2vw;
+  margin-bottom: 2vh;
+  display: none;
+}
+
+.todoContainerVisibility {
+  display: flex;
+}
+
+.todoArticle {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--container-color);
+  margin: 1vh;
+  width: 85vw;
+  min-height: 21vh;
+  border-radius: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoArticle > h4,
+.todoArticle > p {
+  color: var(--secondary-color);
+}
+
+.todoArticle > p {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/*/////////////Responsive////////////////*/
+@media screen and (min-width: 725px) {
+  .activitiesContainer {
+    flex-direction: row;
+    align-items: unset;
+  }
+
+  .activitiesQuestion {
+    width: 52vw;
+    margin-right: 4vh;
+    height: 77vh;
+  }
+
+  .questionForm {
+    width: 46vw;
+    height: 7vh;
+  }
+
+  .activitiesValidation {
+    margin-bottom: 3vh;
+  }
+
+  .todoContainer {
+    width: 31vw;
+    height: 77vh;
+    margin: 0;
+  }
+
+  .todoArticle {
+    width: 26vw;
+    height: 20vh;
+  }
+}
