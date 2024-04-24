@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./Activies.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
 import Activities from "../../../BDD/Activities";
-// import WeatherIndex from "../../WeatherIndex1";
 
 function ActivitiesChoice({ currentWeather} ) {
   const [feelValue, setFeelValue] = useState("discovery");
@@ -120,11 +119,6 @@ function ActivitiesChoice({ currentWeather} ) {
 
 ActivitiesChoice.propTypes = {
   currentWeather: PropTypes.number.isRequired,
-  // windSpeed: PropTypes.number.isRequired,
-  // opacity: PropTypes.number.isRequired,
-  // snowfall: PropTypes.number.isRequired,
-  // setCurrentWeather: PropTypes.number.isRequired,
-  // isDay: PropTypes.number.isRequired,
 };
 
 export default ActivitiesChoice;
