@@ -1,8 +1,22 @@
+// import { element } from "prop-types";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 import "./ReservationForm.css";
-import PropTypes from "prop-types";
 import ShuttleCards from "../../BDD/ShuttleCards";
+import PopUp from "./PopUp";
 
-export default function ReservationForm({ cardIndex }) {
+export default function ReservationForm() {
+  const [name, setName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const { id } = useParams();
+  const [quantity, setQuantity] = useState("1");
+  const parsin = parseInt(ShuttleCards[id].price, 10);
+
+  const inputDetails = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
       <h1>Reservation form</h1>
@@ -11,33 +25,54 @@ export default function ReservationForm({ cardIndex }) {
           <form id="inputForm">
             <label>
               Name:
-              <input type="text" name="name" />
+              <input
+                onChange={(e) => setName(e.target.value)}
+                value={name}
+                type="text"
+                name="name"
+              />
             </label>
             <label>
-              Surname:
-              <input type="text" name="surName" />
+              Lastname:
+              <input
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                type="text"
+                name="surName"
+              />
             </label>
             <label>
               Email:
-              <input type="email" name="user_email" />
+              <input
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                type="email"
+                name="user_email"
+              />
+            </label>
+            <label>
+              {" "}
+              Quantity:
+              <input
+                onChange={(e) => setQuantity(e.target.value)}
+                type="number"
+                className="number"
+                name="quantity"
+                min="1"
+                value={quantity}
+              />
             </label>
           </form>
           <div className="chosenShipContainer">
             <div className="chosenShip">
-              <img src={ShuttleCards[cardIndex].image} alt="ShuttleCard" />
+              <img src={ShuttleCards[id].image} alt="ShuttleCard" />
             </div>
-            <h3>{ShuttleCards[cardIndex].activTy}</h3>
-            <p>{ShuttleCards[cardIndex].price}</p>
+            <h3>{ShuttleCards[id].activTy}</h3>
+            <p>${parsin * quantity}</p>
           </div>
         </div>
-        <button type="submit" className="validateBtn">
-          Validate
-        </button>
+        <PopUp onClick={inputDetails} name={name} />
       </div>
     </div>
   );
 }
-
-ReservationForm.propTypes = {
-  cardIndex: PropTypes.number.isRequired,
-};

@@ -85,7 +85,7 @@ export default function Reservation({ cardIndex, setCardIndex }) {
           </div>
 
           <button type="button" className="reservationButton">
-            <NavLink to="/reservation/form">
+            <NavLink to={`/reservation/form/${cardIndex}`}>
               <p>Validate</p>
             </NavLink>
           </button>
