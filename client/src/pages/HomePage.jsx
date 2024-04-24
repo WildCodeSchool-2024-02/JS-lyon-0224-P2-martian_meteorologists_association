@@ -3,9 +3,9 @@ import { useLoaderData } from "react-router-dom";
 
 import "../App.css";
 
-import WeatherContainer from "../components/WeatherContainer/WeatherContainer";
-import CurrentWeather from "../components/CurrentWeather/CurrentWeather";
-import AdditionalInformation from "../components/AdditionalInformation/AdditionalInformation";
+import WeatherContainer from "../components/HomePage/WeatherContainer/WeatherContainer";
+import CurrentWeather from "../components/HomePage/CurrentWeather/CurrentWeather";
+import AdditionalInformation from "../components/HomePage/AdditionalInformation/AdditionalInformation";
 
 function HomePage() {
   const weatherData = useLoaderData("API");
@@ -20,6 +20,7 @@ function HomePage() {
           snowFall={weatherData.current.snowfall}
           currentWeather={currentWeather}
           setCurrentWeather={setCurrentWeather}
+          isDay={weatherData.current.is_day}
         />
       </div>
 
