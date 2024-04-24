@@ -13,20 +13,31 @@ function CurrentWeather({
   windSpeed,
   opacity,
   snowFall,
+  isDay,
 }) {
   // get index meteo from BDD Weather Logo
   useEffect(() => {
-    if (windSpeed > 60) {
-      setCurrentWeather(4);
-    } else if (opacity > 50) {
-      setCurrentWeather(0);
-    } else if (snowFall > 0) {
-      setCurrentWeather(2);
-    } else {
-      setCurrentWeather(1);
+    // day or night
+    const day = isDay ? "day" : "night";
+    switch (true) {
+      case windSpeed > 60:
+        setCurrentWeather(4);
+        break;
+      case opacity > 50:
+        setCurrentWeather(0);
+        break;
+      case snowFall > 0:
+        setCurrentWeather(2);
+        break;
+      case (windSpeed > 60 && opacity > 50) || (snowFall > 0 && windSpeed > 60):
+        setCurrentWeather(3);
+        break;
+      default:
+        setCurrentWeather(day === "day" ? 1 : 5);
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [windSpeed, opacity, snowFall, isDay]);
 
   const temperatureMars = currentTemperature * -2;
 
@@ -54,7 +65,7 @@ function CurrentWeather({
 
       {/* rotating Mars */}
       <div className="mars">
-        <Canvas>
+        <Canvas className="marsPlanet">
           <ambientLight intensity={1.8} color="#ffffff" />
           <OrbitControls
             enableZoom={false}
@@ -79,6 +90,7 @@ CurrentWeather.propTypes = {
   opacity: PropTypes.number.isRequired,
   windSpeed: PropTypes.number.isRequired,
   snowFall: PropTypes.number.isRequired,
+  isDay: PropTypes.number.isRequired,
 };
 
 export default CurrentWeather;

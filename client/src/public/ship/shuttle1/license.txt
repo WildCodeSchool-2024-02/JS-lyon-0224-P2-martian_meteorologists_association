@@ -1,0 +1,11 @@
+Model Information:
+* title:	UFO "Rick and Morty"
+* source:	https://sketchfab.com/3d-models/ufo-rick-and-morty-fe440d6641d2426cb69beefe7f3ec161
+* author:	glebchik20 (https://sketchfab.com/glebchik20)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "UFO "Rick and Morty"" (https://sketchfab.com/3d-models/ufo-rick-and-morty-fe440d6641d2426cb69beefe7f3ec161) by glebchik20 (https://sketchfab.com/glebchik20) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
