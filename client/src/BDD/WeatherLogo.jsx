@@ -29,6 +29,18 @@ const WeatherLogo = [
     activity: "Stay home !",
     clothes: "Windy: Streamlined, windproof.",
   },
+  {
+    name: "cloudy-moon",
+    imgSrc: "./src/assets/weatherLogo/cloudy-night.svg",
+    activity: "sleep",
+    clothes: "Cloudy: Lightweight Comfortable, UV protection;",
+  },
+  {
+    name: "snow",
+    imgSrc: "./src/assets/weatherLogo/snowy-moon.svg",
+    activity: "heat up",
+    clothes: "Snowy: worm Insulated, water-resistant",
+  },
 ];
 
 export default WeatherLogo;
