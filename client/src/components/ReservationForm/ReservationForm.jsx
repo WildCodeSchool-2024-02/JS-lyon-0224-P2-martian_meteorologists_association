@@ -13,6 +13,10 @@ export default function ReservationForm() {
   const [quantity, setQuantity] = useState("1");
   const parsin = parseInt(ShuttleCards[id].price, 10);
 
+  const result = parsin * quantity
+  const amount = new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format(result)
+
+
   const inputDetails = (e) => {
     e.preventDefault();
   };
@@ -68,7 +72,7 @@ export default function ReservationForm() {
               <img src={ShuttleCards[id].image} alt="ShuttleCard" />
             </div>
             <h3>{ShuttleCards[id].activTy}</h3>
-            <p>${parsin * quantity}</p>
+            <p>{amount}</p>
           </div>
         </div>
         <PopUp onClick={inputDetails} name={name} />
