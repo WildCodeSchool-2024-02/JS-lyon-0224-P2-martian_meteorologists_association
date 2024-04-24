@@ -41,6 +41,12 @@ const WeatherLogo = [
     activity: "heat up",
     clothes: "Snowy: worm Insulated, water-resistant",
   },
+  {
+    name: "moon",
+    imgSrc: "./src/assets/weatherLogo/moon.svg",
+    activity: "relax at home and play",
+    clothes: "Moon: Comfortable, lightweight",
+  },
 ];
 
 export default WeatherLogo;
