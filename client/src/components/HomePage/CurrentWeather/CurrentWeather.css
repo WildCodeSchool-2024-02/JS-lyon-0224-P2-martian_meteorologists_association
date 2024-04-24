@@ -33,7 +33,7 @@ body {
   justify-content: space-around;
 }
 
-canvas {
+marsPlanet {
   height: 15vh !important;
   width: 15vh !important;
 }
@@ -63,7 +63,7 @@ canvas {
     margin: 0 auto;
   }
 
-  canvas {
+  marsPlanet {
     height: 22vh !important;
     width: 22vh !important;
   }

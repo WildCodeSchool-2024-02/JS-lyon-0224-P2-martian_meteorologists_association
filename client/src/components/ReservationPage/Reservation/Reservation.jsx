@@ -1,6 +1,9 @@
+import { Suspense, useState } from "react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
+
 import "./Reservation.css";
 
-import { useState } from "react";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
 export default function Reservation() {
@@ -12,6 +15,7 @@ export default function Reservation() {
   return (
     <div>
       <h1>choose your shuttle</h1>
+
       <div className="shipContainer">
         <div className="shipCards">
           <article className="shipChoice">
@@ -64,11 +68,20 @@ export default function Reservation() {
         </div>
 
         <div className="card">
-          <img
-            src={ShuttleCards[cardIndex].image}
-            alt={ShuttleCards[cardIndex].activTy}
-          />
-
+          <div className="suttle3d">
+            <Canvas
+              className="canva3d"
+              camera={{ position: [-15, 5, -10] }} // Set initial camera position for zoom
+              gl={{ antialias: true }}
+            >
+              <ambientLight intensity={1.8} />
+              <OrbitControls autoRotate />
+              <PerspectiveCamera fov={75} near={0.1} far={1000} />
+              <Suspense fallback={null}>
+                {ShuttleCards[cardIndex].ship}
+              </Suspense>
+            </Canvas>
+          </div>
           <h2>{ShuttleCards[cardIndex].activTy}</h2>
           <p>{ShuttleCards[cardIndex].description}</p>
         </div>
