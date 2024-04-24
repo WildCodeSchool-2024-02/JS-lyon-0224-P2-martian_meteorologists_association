@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 
 import "../App.css";
@@ -6,10 +6,12 @@ import "../App.css";
 import WeatherContainer from "../components/HomePage/WeatherContainer/WeatherContainer";
 import CurrentWeather from "../components/HomePage/CurrentWeather/CurrentWeather";
 import AdditionalInformation from "../components/HomePage/AdditionalInformation/AdditionalInformation";
+import IndexCurrentWeather from "../Contexts/IndexCurrentWeather";
 
 function HomePage() {
   const weatherData = useLoaderData("API");
-  const [currentWeather, setCurrentWeather] = useState(1);
+  // const [currentWeather, setCurrentWeather] = useState(1);
+  const { currentWeather, setCurrentWeather } = useContext(IndexCurrentWeather);
   return (
     <div className="mainPage">
       <div className="weather">

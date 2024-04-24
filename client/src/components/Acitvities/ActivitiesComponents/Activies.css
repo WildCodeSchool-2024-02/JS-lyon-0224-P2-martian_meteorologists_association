@@ -83,7 +83,7 @@
   background-color: var(--container-color);
   margin: 1vh;
   width: 85vw;
-  height: 7vh;
+  min-height: 21vh;
   border-radius: 1.5rem;
   justify-content: center;
   align-items: center;
@@ -95,7 +95,8 @@
 }
 
 .todoArticle > p {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 /*/////////////Responsive////////////////*/
