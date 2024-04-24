@@ -11,7 +11,6 @@ function CurrentWeather({
   currentWeather,
 }) {
 
-
   const temperatureMars = currentTemperature * -2;
 
   // Get date of the day
@@ -58,7 +57,7 @@ function CurrentWeather({
 // PropTypes validation
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
-  currentWeather: PropTypes.number.isRequired,
+  currentWeather: PropTypes.string.isRequired,
 };
 
 export default CurrentWeather;
