@@ -36,7 +36,7 @@ const WeatherLogo = [
     clothes: "Cloudy: Lightweight Comfortable, UV protection;",
   },
   {
-    name: "snow",
+    name: "snowy-moon",
     imgSrc: "./src/assets/weatherLogo/snowy-moon.svg",
     activity: "heat up",
     clothes: "Snowy: worm Insulated, water-resistant",

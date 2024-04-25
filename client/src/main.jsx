@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <ActivitiesPage />,
       },
       {
-        path: "/reservation/form/:id",
+        path: "/reservation/form/:id/:date",
         element: <ReservationFormPage />,
       },
     ],

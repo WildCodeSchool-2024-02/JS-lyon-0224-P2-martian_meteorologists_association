@@ -4,13 +4,12 @@ import "./Activies.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
 import Activities from "../../../BDD/Activities";
 
-function ActivitiesChoice({ currentWeather} ) {
+function ActivitiesChoice({ currentWeather }) {
   const [feelValue, setFeelValue] = useState("discovery");
   const [sportValue, setSportValue] = useState("sportYes");
   const [randomIndexes, setRandomIndexes] = useState([0, 1, 2]);
   const [filteredActivities, setFilteredActivities] = useState(Activities);
   const [visibility, setVisibility] = useState("");
-
 
   // modification Onchange
   const handleFeelChange = (event) => {
@@ -46,8 +45,6 @@ function ActivitiesChoice({ currentWeather} ) {
     }
     setRandomIndexes(tbl);
   };
-
-
 
   return (
     <>
@@ -118,7 +115,7 @@ function ActivitiesChoice({ currentWeather} ) {
 }
 
 ActivitiesChoice.propTypes = {
-  currentWeather: PropTypes.string.isRequired,
+  currentWeather: PropTypes.number.isRequired,
 };
 
 export default ActivitiesChoice;

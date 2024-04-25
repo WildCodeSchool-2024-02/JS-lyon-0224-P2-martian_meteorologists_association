@@ -2,9 +2,7 @@ import { useContext } from "react";
 import Activities from "../components/Acitvities/ActivitiesComponents/Activities";
 import { IndexCurrentWeather } from "../Contexts/IndexCurrentWeather";
 
-
 export default function ActivitiesPage() {
-
   const { weatherData, currentWeather } = useContext(IndexCurrentWeather);
 
   if (!weatherData) {
@@ -13,9 +11,7 @@ export default function ActivitiesPage() {
 
   return (
     <div>
-      <Activities 
-      currentWeather={currentWeather}
-     />
+      <Activities currentWeather={currentWeather} />
     </div>
   );
 }

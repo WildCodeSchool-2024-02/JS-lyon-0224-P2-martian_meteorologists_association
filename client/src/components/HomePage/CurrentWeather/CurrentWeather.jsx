@@ -53,7 +53,7 @@ function CurrentWeather({ currentTemperature, currentWeather }) {
 // PropTypes validation
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
-  currentWeather: PropTypes.string.isRequired,
+  currentWeather: PropTypes.number.isRequired,
 };
 
 export default CurrentWeather;
