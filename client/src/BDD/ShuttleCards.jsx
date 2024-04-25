@@ -9,7 +9,7 @@ const ShuttleCards = [
     ship: <Premuim />,
     description:
       "Indulge in six months of travel with the luxury of included spa treatments and room service, ensuring your relaxation and enjoyment throughout.",
-    price: "500000000",
+    price: 500000000,
   },
   {
     name: "Classic",
@@ -17,7 +17,7 @@ const ShuttleCards = [
     ship: <Classic />,
     description:
       "Relish in guaranteed comfort and breathtaking views throughout nine months of travel, offering ample time for personal growth and self-discovery.",
-    price: "450000000",
+    price: 450000000,
   },
   {
     name: "Pedalo",
@@ -25,7 +25,7 @@ const ShuttleCards = [
     ship: <Pedalo />,
     description:
       "Gear up for an epic journey! Pedal your way to Mars and sculpt the perfect legs for your adventure. Please exercise caution and choose wisely, as we cannot assume responsibility for your safety.",
-    price: "300000000",
+    price: 300000000,
   },
 ];
 export default ShuttleCards;

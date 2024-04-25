@@ -50,7 +50,7 @@
     slideIn 0.8s linear;
 }
 
-h4 {
+.popUpMessage {
   margin-top: 3rem;
 }
 

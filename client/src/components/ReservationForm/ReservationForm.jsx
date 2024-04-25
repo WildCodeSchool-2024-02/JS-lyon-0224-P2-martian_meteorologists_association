@@ -11,11 +11,13 @@ export default function ReservationForm() {
   const [email, setEmail] = useState("");
   const { id } = useParams();
   const [quantity, setQuantity] = useState("1");
-  const parsin = parseInt(ShuttleCards[id].price, 10);
 
-  const result = parsin * quantity
-  const amount = new Intl.NumberFormat("de-DE", { style: "currency", currency: "USD" }).format(result)
+  const { date } = useParams();
 
+  const amount = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "USD",
+  }).format(ShuttleCards[id].price * quantity);
 
   const inputDetails = (e) => {
     e.preventDefault();
@@ -73,6 +75,7 @@ export default function ReservationForm() {
             </div>
             <h3>{ShuttleCards[id].activTy}</h3>
             <p>{amount}</p>
+            <p>{date}</p>
           </div>
         </div>
         <PopUp onClick={inputDetails} name={name} />

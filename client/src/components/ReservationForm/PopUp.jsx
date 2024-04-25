@@ -29,7 +29,9 @@ export default function PopUp({ name }) {
           </button>
           <div className="popUp-content">
             <h2>Thank You {name}!</h2>
-            <h4>We will contact you for further details.</h4>
+            <h4 className="popUpMessage">
+              We will contact you for further details.
+            </h4>
             <button className="close-popUp" type="button">
               <NavLink to="/">CLOSE</NavLink>
             </button>
