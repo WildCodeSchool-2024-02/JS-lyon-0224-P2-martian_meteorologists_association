@@ -1,21 +1,39 @@
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
 import PropTypes from "prop-types";
-import { NavLink } from "react-router-dom";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
 export default function Reservation({ cardIndex, setCardIndex }) {
+  const [date, setDate] = useState(0);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    setDate(event.target.value);
+    setIsButtonDisabled(!isButtonDisabled);
+  };
+
+  const handleButtonClick = () => {
+    window.location = `/reservation/form/${cardIndex}/${date}`;
+  };
+
   const handleClick = (event) => {
+    event.preventDefault();
     const infoIndex = parseInt(event.currentTarget.value, 10);
     setCardIndex(infoIndex);
   };
+
+  const amount = new Intl.NumberFormat("de-DE", {
+    style: "currency",
+    currency: "USD",
+  }).format(ShuttleCards[cardIndex].price);
+
   return (
     <div>
-      <h1>choose your shuttle</h1>
-
+      <h1>Choose your shuttle</h1>
       <div className="shipContainer">
         <div className="shipCards">
           <article className="shipChoice">
@@ -89,19 +107,28 @@ export default function Reservation({ cardIndex, setCardIndex }) {
 
       <div className="dateChoice">
         <label className="datesContainer">
-          <p>select your dates</p>
-          <input type="date" className="date" name="date" />
+          <p>Choose your dates</p>
+          <input
+            onChange={handleChange}
+            type="date"
+            className="date"
+            name="date"
+            value={date}
+          />
         </label>
 
         <div className="validationButton">
           <div className="price">
-            <p>price : {ShuttleCards[cardIndex].price}</p>
+            <p>price : {amount} </p>
           </div>
 
-          <button type="button" className="reservationButton">
-            <NavLink to={`/reservation/form/${cardIndex}`}>
-              <p>Validate</p>
-            </NavLink>
+          <button
+            onClick={handleButtonClick}
+            type="button"
+            disabled={isButtonDisabled}
+            className="reservationButton"
+          >
+            <p>Validate</p>
           </button>
         </div>
       </div>
