@@ -1,16 +1,15 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
-import { ReservationProvider } from "./components/Contexts/ReservationChoiseContext";
+import { WeatherIndexProvider } from "./Contexts/IndexCurrentWeather";
 
 function App() {
   return (
     <>
       <Navbar />
-
       <main>
-        <ReservationProvider>
+        <WeatherIndexProvider>
           <Outlet />
-        </ReservationProvider>
+        </WeatherIndexProvider>
       </main>
     </>
   );

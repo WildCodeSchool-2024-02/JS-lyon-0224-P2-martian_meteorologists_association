@@ -8,8 +8,9 @@ export default function PopUp({ name }) {
 
   const togglePopUp = () => {
     setPopUp(!popUp);
-
-
+    setTimeout(() => {
+      window.location = "/";
+    }, 5000);
   };
 
   if (popUp === true) {
@@ -17,9 +18,7 @@ export default function PopUp({ name }) {
   } else {
     document.body.classList.remove("active-popUp");
   }
-  setTimeout(() => {
-    window.location = "/"
-  }, 5000);
+
   return (
     <div>
       <button onClick={togglePopUp} type="button" className="validateBtn">
@@ -28,13 +27,12 @@ export default function PopUp({ name }) {
 
       {popUp && (
         <div className="modal">
-          <button onClick={setTimeout} type="button" className="overlay">
+          <button type="button" className="overlay">
             close
           </button>
           <div className="popUp-content">
             <h2>Thank You {name}!</h2>
             <h4>We will contact you for further details.</h4>
-
           </div>
         </div>
       )}

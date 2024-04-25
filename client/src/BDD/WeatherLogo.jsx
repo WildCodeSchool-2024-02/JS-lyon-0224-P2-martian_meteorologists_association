@@ -30,10 +30,28 @@ const WeatherLogo = [
     clothes: "Windy: Streamlined, windproof.",
   },
   {
+    name: "cloudy-moon",
+    imgSrc: "./src/assets/weatherLogo/cloudy-night.svg",
+    activity: "sleep",
+    clothes: "Cloudy: Lightweight Comfortable, UV protection;",
+  },
+  {
+    name: "snow",
+    imgSrc: "./src/assets/weatherLogo/snowy-moon.svg",
+    activity: "heat up",
+    clothes: "Snowy: worm Insulated, water-resistant",
+  },
+  {
     name: "moon",
     imgSrc: "./src/assets/weatherLogo/moon.svg",
     activity: "relax at home and play",
     clothes: "Moon: Comfortable, lightweight",
+  },
+  {
+    name: "cloudy-sun",
+    imgSrc: "./src/assets/weatherLogo/cloudy-sun.svg",
+    activity: "do some exploration",
+    clothes: "Cloudy: Lightweight Comfortable, UV protection;",
   },
 ];
 
