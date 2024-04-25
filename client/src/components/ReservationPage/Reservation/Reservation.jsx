@@ -1,13 +1,13 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation() {
-  const [cardIndex, setCardIndex] = useState(0);
+export default function Reservation({ cardIndex, setCardIndex }) {
   const handleClick = (event) => {
     const infoIndex = parseInt(event.currentTarget.value, 10);
     setCardIndex(infoIndex);
@@ -99,10 +99,17 @@ export default function Reservation() {
           </div>
 
           <button type="button" className="reservationButton">
-            <p>validate</p>
+            <NavLink to={`/reservation/form/${cardIndex}`}>
+              <p>Validate</p>
+            </NavLink>
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+Reservation.propTypes = {
+  cardIndex: PropTypes.number.isRequired,
+  setCardIndex: PropTypes.func.isRequired,
+};

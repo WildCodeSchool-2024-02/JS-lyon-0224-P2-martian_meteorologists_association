@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-
 import Navbar from "./components/Navbar/Navbar";
+import { ReservationProvider } from "./components/Contexts/ReservationChoiseContext";
 
 function App() {
   return (
@@ -8,7 +8,9 @@ function App() {
       <Navbar />
 
       <main>
-        <Outlet />
+        <ReservationProvider>
+          <Outlet />
+        </ReservationProvider>
       </main>
     </>
   );
