@@ -8,10 +8,6 @@ import AdditionalInformation from "../components/HomePage/AdditionalInformation/
 function HomePage() {
   const { weatherData, currentWeather } = useContext(IndexCurrentWeather);
 
-  if (!weatherData) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="mainPage">
       <div className="weather">

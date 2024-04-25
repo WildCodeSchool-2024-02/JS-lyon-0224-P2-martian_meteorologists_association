@@ -71,6 +71,8 @@ function WeatherIndexProvider({ children }) {
   );
 
   return (
+
+  !weatherData? <p>Loading...</p> : 
     <IndexCurrentWeather.Provider value={value}>
       {children}
     </IndexCurrentWeather.Provider>
