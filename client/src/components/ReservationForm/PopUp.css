@@ -1,0 +1,79 @@
+/* body.active-popUp {
+    overflow-y: hidden;
+} */
+
+.validateBtn {
+  margin: 1rem 0;
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  width: 25vw;
+  height: 5vh;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: large;
+  font-family: "victorMono";
+}
+
+.popUp,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  text-indent: 100%;
+}
+
+.overlay {
+  background: linear-gradient(#c96c37, #8d3300);
+}
+
+.popUp-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 85vw;
+  height: 45vh;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background-color: rgba(217, 217, 217, 0.5);
+  border-radius: 1.5rem;
+  animation:
+    fadeIn 1s,
+    slideIn 0.8s linear;
+}
+
+h4 {
+  margin-top: 3rem;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%);
+    animation-timing-function: ease-out;
+  }
+}
+
+.close-popUp {
+  margin-top: 3rem;
+  background-color: rgba(217, 217, 217);
+  width: 10vw;
+  height: 5vh;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: large;
+}
+
+.close-popUp > a {
+  color: #8d3300;
+  text-decoration: none;
+  font-family: "victorMono";
+}

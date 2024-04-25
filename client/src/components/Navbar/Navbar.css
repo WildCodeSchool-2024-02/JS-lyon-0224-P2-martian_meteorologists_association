@@ -60,6 +60,7 @@ nav ul li a:not(.active):hover {
   }
 
   nav {
+    margin-top: 2rem;
     flex-direction: row;
     justify-content: flex-end;
   }

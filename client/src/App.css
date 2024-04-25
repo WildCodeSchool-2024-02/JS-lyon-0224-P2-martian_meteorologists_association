@@ -15,9 +15,10 @@
   --container-color: #d9d9d9;
 }
 
-html {
+body {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1,
@@ -25,10 +26,13 @@ h2,
 h3,
 h4,
 p,
+select,
 a {
   font-family: "victorMono";
   color: white;
   margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (min-width: 725px) {
