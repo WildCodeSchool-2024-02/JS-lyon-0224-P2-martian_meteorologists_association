@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from "react";
+import { Suspense } from "react";
 import PropTypes from "prop-types";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -6,48 +6,7 @@ import Mars from "./Mars";
 import "./CurrentWeather.css";
 import WeatherLogo from "../../../BDD/WeatherLogo";
 
-function CurrentWeather({
-  currentTemperature,
-  currentWeather,
-  setCurrentWeather,
-  windSpeed,
-  opacity,
-  snowFall,
-  isDay,
-}) {
-  // get index meteo from BDD Weather Logo
-  useEffect(() => {
-    // day or night
-    const day = isDay ? "day" : "night";
-    switch (true) {
-      case day === "day" && opacity > 50:
-        setCurrentWeather(8);
-        break;
-      case opacity > 60:
-        setCurrentWeather(0);
-        break;
-      case windSpeed > 50:
-        setCurrentWeather(4);
-        break;
-      case (windSpeed > 60 && opacity > 50) || (snowFall > 0 && windSpeed > 60):
-        setCurrentWeather(3);
-        break;
-      case snowFall > 0:
-        setCurrentWeather(2);
-        break;
-      case day === "night" && opacity > 50:
-        setCurrentWeather(5);
-        break;
-      case day === "night" && snowFall > 0:
-        setCurrentWeather(6);
-        break;
-      default:
-        setCurrentWeather(day === "day" ? 1 : 7);
-    }
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [windSpeed, opacity, snowFall, isDay]);
-
+function CurrentWeather({ currentTemperature, currentWeather }) {
   const temperatureMars = currentTemperature * -2;
 
   // Get date of the day
@@ -94,12 +53,7 @@ function CurrentWeather({
 // PropTypes validation
 CurrentWeather.propTypes = {
   currentTemperature: PropTypes.number.isRequired,
-  currentWeather: PropTypes.number.isRequired,
-  setCurrentWeather: PropTypes.func.isRequired,
-  opacity: PropTypes.number.isRequired,
-  windSpeed: PropTypes.number.isRequired,
-  snowFall: PropTypes.number.isRequired,
-  isDay: PropTypes.number.isRequired,
+  currentWeather: PropTypes.string.isRequired,
 };
 
 export default CurrentWeather;
