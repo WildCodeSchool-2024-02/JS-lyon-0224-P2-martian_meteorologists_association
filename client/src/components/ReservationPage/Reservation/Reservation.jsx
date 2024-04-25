@@ -1,13 +1,13 @@
-import { Suspense, useState } from "react";
+import { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-
+import PropTypes from "prop-types";
+import { NavLink } from "react-router-dom";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation() {
-  const [cardIndex, setCardIndex] = useState(0);
+export default function Reservation({ cardIndex, setCardIndex }) {
   const handleClick = (event) => {
     const infoIndex = parseInt(event.currentTarget.value, 10);
     setCardIndex(infoIndex);
@@ -27,10 +27,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[0].image}
-                alt={ShuttleCards[0].activTy}
+                alt={ShuttleCards[0].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[0].activTy}</h4>
+              <h4>{ShuttleCards[0].name}</h4>
             </button>
           </article>
 
@@ -43,10 +43,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[1].image}
-                alt={ShuttleCards[1].activTy}
+                alt={ShuttleCards[1].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[1].activTy}</h4>
+              <h4>{ShuttleCards[1].name}</h4>
             </button>
           </article>
 
@@ -59,10 +59,10 @@ export default function Reservation() {
             >
               <img
                 src={ShuttleCards[2].image}
-                alt={ShuttleCards[2].activTy}
+                alt={ShuttleCards[2].name}
                 width="60px"
               />
-              <h4>{ShuttleCards[2].activTy}</h4>
+              <h4>{ShuttleCards[2].name}</h4>
             </button>
           </article>
         </div>
@@ -82,7 +82,7 @@ export default function Reservation() {
               </Suspense>
             </Canvas>
           </div>
-          <h2>{ShuttleCards[cardIndex].activTy}</h2>
+          <h2>{ShuttleCards[cardIndex].name}</h2>
           <p>{ShuttleCards[cardIndex].description}</p>
         </div>
       </div>
@@ -99,10 +99,17 @@ export default function Reservation() {
           </div>
 
           <button type="button" className="reservationButton">
-            <p>validate</p>
+            <NavLink to={`/reservation/form/${cardIndex}`}>
+              <p>Validate</p>
+            </NavLink>
           </button>
         </div>
       </div>
     </div>
   );
 }
+
+Reservation.propTypes = {
+  cardIndex: PropTypes.number.isRequired,
+  setCardIndex: PropTypes.func.isRequired,
+};
