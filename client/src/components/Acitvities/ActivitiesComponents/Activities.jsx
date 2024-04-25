@@ -115,7 +115,7 @@ function ActivitiesChoice({ currentWeather }) {
 }
 
 ActivitiesChoice.propTypes = {
-  currentWeather: PropTypes.string.isRequired,
+  currentWeather: PropTypes.number.isRequired,
 };
 
 export default ActivitiesChoice;
