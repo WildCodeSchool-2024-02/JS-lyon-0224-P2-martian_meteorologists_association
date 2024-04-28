@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./PopUp.css";
 
-export default function PopUp({ name }) {
+export default function PopUp({ name, isBtnDisabled, activeBtn }) {
   const [popUp, setPopUp] = useState(false);
 
   const togglePopUp = () => {
@@ -21,7 +21,12 @@ export default function PopUp({ name }) {
 
   return (
     <div>
-      <button onClick={togglePopUp} type="button" className="validateBtn">
+      <button
+        onClick={togglePopUp}
+        disabled={isBtnDisabled}
+        type="button"
+        className={`validateBtn ${activeBtn}`}
+      >
         Validate
       </button>
 
@@ -42,4 +47,6 @@ export default function PopUp({ name }) {
 
 PopUp.propTypes = {
   name: PropTypes.string.isRequired,
+  isBtnDisabled: PropTypes.bool.isRequired,
+  activeBtn: PropTypes.string.isRequired,
 };
