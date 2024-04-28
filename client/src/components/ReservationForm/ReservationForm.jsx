@@ -10,6 +10,7 @@ function ReservationForm() {
   const [quantity, setQuantity] = useState("1");
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
   const [activeBtn, setActiveBtn] = useState("disValidatebtn");
+  const [activeMsg, setActiveMsg] = useState("validateMsg");
 
   const { date } = useParams();
 
@@ -39,6 +40,7 @@ function ReservationForm() {
     ) {
       setIsBtnDisabled(false);
       setActiveBtn("validateBtn");
+      setActiveMsg("disValidateMsg");
     }
   };
 
@@ -102,6 +104,7 @@ function ReservationForm() {
           name={allDetails.name}
           isBtnDisabled={isBtnDisabled}
           activeBtn={activeBtn}
+          activeMsg={activeMsg}
         />
       </div>
     </div>

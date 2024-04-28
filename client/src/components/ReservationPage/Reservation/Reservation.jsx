@@ -9,11 +9,18 @@ import ShuttleCards from "../../../BDD/ShuttleCards";
 export default function Reservation({ cardIndex, setCardIndex }) {
   const [date, setDate] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [reservationBtn, setReservationBtn] = useState("disReservationButton");
+  const [activeMsg, setActiveMsg] = useState("reservationMsg");
 
   const handleChange = (event) => {
     event.preventDefault();
-    setDate(event.target.value);
-    setIsButtonDisabled(!isButtonDisabled);
+    const selectedDate = event.target.value;
+    setDate(selectedDate);
+    if (selectedDate !== 0) {
+      setIsButtonDisabled(false);
+      setReservationBtn("reservationButton");
+      setActiveMsg("disReservationMessage");
+    }
   };
 
   const handleButtonClick = () => {
@@ -121,15 +128,19 @@ export default function Reservation({ cardIndex, setCardIndex }) {
           <div className="price">
             <p>price : {amount} </p>
           </div>
-
-          <button
-            onClick={handleButtonClick}
-            type="button"
-            disabled={isButtonDisabled}
-            className="reservationButton"
-          >
-            <p>Validate</p>
-          </button>
+          <div className="validBtnDiv">
+            <button
+              onClick={handleButtonClick}
+              type="button"
+              disabled={isButtonDisabled}
+              className={`reservationButton ${reservationBtn}`}
+            >
+              Validate
+            </button>
+            <p className={`reservationMsg ${activeMsg}`}>
+              Please choose a date!
+            </p>
+          </div>
         </div>
       </div>
     </div>

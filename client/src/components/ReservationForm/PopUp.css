@@ -1,3 +1,9 @@
+.validBtnDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .validateBtn {
   margin: 1rem 0;
   background-color: rgba(217, 217, 217, 0.5);
@@ -12,23 +18,14 @@
   cursor: pointer;
 }
 
-.validateBtn > p {
-  text-indent: 100%;
+.disValidateMsg {
   color: transparent;
-  font-size: 0;
 }
 
 .disValidatebtn {
   margin: 1rem 0;
   background-color: rgba(217, 217, 217, 0.5);
   color: rgba(217, 217, 217, 0.5);
-  /* width: 25vw;
-  height: 5vh;
-  border: none;
-  border-radius: 1.5rem;
-  font-weight: bold;
-  font-size: large;
-  font-family: "victorMono"; */
   cursor: not-allowed;
 }
 

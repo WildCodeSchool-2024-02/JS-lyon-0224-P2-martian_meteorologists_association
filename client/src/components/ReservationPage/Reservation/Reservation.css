@@ -113,21 +113,35 @@ p {
 /* Reservation button and price */
 
 .reservationButton {
+  margin: 0.5rem 0;
+  width: 15vw;
+  height: 4.5vh;
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
   border-radius: 1.5rem;
   font-weight: bold;
   font-size: large;
+  cursor: pointer;
 }
 
-.reservationButton > a {
-  text-decoration: none;
-  border-radius: 1.5rem;
+.reservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.8);
 }
 
-.reservationButton > a:hover {
+.disReservationButton {
   background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+  cursor: not-allowed;
+}
+
+.disReservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.disReservationMessage {
+  color: transparent;
 }
 
 .price {
@@ -174,6 +188,7 @@ p {
     width: 53vw !important;
     height: 45vh !important;
   }
+
   .dateChoice {
     flex-direction: row;
     justify-content: space-evenly;
