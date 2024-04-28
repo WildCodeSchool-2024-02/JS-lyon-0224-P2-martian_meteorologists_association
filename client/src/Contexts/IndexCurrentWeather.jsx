@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect, useMemo } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
+import IndexCurrentWeatherFunction from "../components/IndexCurrentWeatherFunction";
 
 const IndexCurrentWeather = createContext();
 
@@ -30,32 +31,13 @@ function WeatherIndexProvider({ children }) {
           const opacity = APIweather.current.cloud_cover;
           const windSpeed = APIweather.current.wind_speed_10m;
           const snowFall = APIweather.current.snowfall;
-          switch (true) {
-            case day === "day" && opacity > 50:
-              setCurrentWeather(8);
-              break;
-            case opacity > 60:
-              setCurrentWeather(0);
-              break;
-            case windSpeed > 50:
-              setCurrentWeather(4);
-              break;
-            case (windSpeed > 60 && opacity > 50) ||
-              (snowFall > 0 && windSpeed > 60):
-              setCurrentWeather(3);
-              break;
-            case snowFall > 0:
-              setCurrentWeather(2);
-              break;
-            case day === "night" && opacity > 50:
-              setCurrentWeather(5);
-              break;
-            case day === "night" && snowFall > 0:
-              setCurrentWeather(6);
-              break;
-            default:
-              setCurrentWeather(day === "day" ? 1 : 7);
-          }
+          IndexCurrentWeatherFunction(
+            day,
+            opacity,
+            windSpeed,
+            snowFall,
+            setCurrentWeather
+          );
         }
       } catch (error) {
         console.error("error:", error);
@@ -70,9 +52,9 @@ function WeatherIndexProvider({ children }) {
     [weatherData, currentWeather]
   );
 
-  return (
-
-  !weatherData? <p>Loading...</p> : 
+  return weatherData === null ? (
+    <p>Loading...</p>
+  ) : (
     <IndexCurrentWeather.Provider value={value}>
       {children}
     </IndexCurrentWeather.Provider>
