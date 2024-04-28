@@ -20,6 +20,9 @@ h1 {
   border-radius: 1.5rem;
   padding: 1rem;
   font-family: "victorMono";
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
 }
 
 label {
@@ -71,6 +74,9 @@ p {
   height: 15vh;
   border-radius: 1.5rem;
   margin-top: 2rem;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
 }
 
 .validateBtn {
@@ -84,10 +90,17 @@ p {
   font-weight: bold;
   font-size: large;
   font-family: "victorMono";
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
 }
 
 .validateBtn:hover {
   background-color: rgba(217, 217, 217, 0.8);
+}
+
+.invalid-input {
+  border: 1px solid red;
 }
 
 @media screen and (min-width: 725px) {
