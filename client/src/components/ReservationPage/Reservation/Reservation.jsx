@@ -32,7 +32,7 @@ export default function Reservation({ cardIndex, setCardIndex }) {
   }).format(ShuttleCards[cardIndex].price);
 
   return (
-    <div>
+    <div className="resrvation_page">
       <h1>Choose your shuttle</h1>
       <div className="shipContainer">
         <div className="shipCards">
@@ -132,6 +132,22 @@ export default function Reservation({ cardIndex, setCardIndex }) {
           </button>
         </div>
       </div>
+      <footer className="license">
+        <div className="scrolling-text">
+          credits goes to: This work is based on "UFO "Rick and Morty""{" "}
+          (https://sketchfab.com/3d-models/ufo-rick-and-morty-fe440d6641d2426cb69beefe7f3ec161)
+          by glebchik20 (https://sketchfab.com/glebchik20) licensed under
+          CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) || This work
+          is based on "Space Shuttle"
+          (https://sketchfab.com/3d-models/space-shuttle-ff4b00b7ebb24fdd98fb96b08f2c43c9)
+          by Microsoft (https://sketchfab.com/microsoft) licensed under
+          CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) || This work
+          is based on "Colony Tactical Ship"
+          (https://sketchfab.com/3d-models/colony-tactical-ship-050dae751a404f3087aac9241958e2b1)
+          by Rakshaan (https://sketchfab.com/rakshaan) licensed under CC-BY-4.0
+          (http://creativecommons.org/licenses/by/4.0/)
+        </div>
+      </footer>
     </div>
   );
 }
