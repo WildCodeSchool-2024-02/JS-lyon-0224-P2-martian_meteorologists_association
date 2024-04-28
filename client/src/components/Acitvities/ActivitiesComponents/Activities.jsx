@@ -63,7 +63,7 @@ function ActivitiesChoice({ currentWeather }) {
                   onChange={handleFeelChange}
                 >
                   <option value="discovery">
-                    I want to discover new stuff and go on adventures
+                    I want to explore and adventure
                   </option>
                   <option value="relax">I just want to relax</option>
                 </select>
