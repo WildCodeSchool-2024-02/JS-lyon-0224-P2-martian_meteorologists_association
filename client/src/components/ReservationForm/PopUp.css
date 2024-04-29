@@ -1,0 +1,89 @@
+.validBtnDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.validateBtn {
+  margin: 1rem 0;
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  min-width: 10vw;
+  padding: 0 1rem;
+  height: 5vh;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: large;
+  font-family: "victorMono";
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
+  cursor: pointer;
+}
+
+.validateBtn:hover {
+  background-color: rgba(217, 217, 217, 0.8);
+}
+
+.disValidateMsg {
+  color: transparent;
+}
+
+.disValidateBtn {
+  margin: 1rem 0;
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+  cursor: not-allowed;
+}
+
+.disValidateBtn:hover {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.popUp,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  text-indent: 100%;
+}
+
+.overlay {
+  background: linear-gradient(#c96c37, #8d3300);
+}
+
+.popUp-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 85vw;
+  height: 45vh;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background-color: rgba(217, 217, 217, 0.5);
+  border-radius: 1.5rem;
+  animation:
+    fadeIn 1s,
+    slideIn 0.8s linear;
+}
+
+.popUpMessage {
+  margin-top: 3rem;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%);
+    animation-timing-function: ease-out;
+  }
+}

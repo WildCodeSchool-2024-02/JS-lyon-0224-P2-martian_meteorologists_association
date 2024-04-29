@@ -1,25 +1,19 @@
-import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
-
+import { useContext } from "react";
 import "../App.css";
-
-import WeatherContainer from "../components/WeatherContainer/WeatherContainer";
-import CurrentWeather from "../components/CurrentWeather/CurrentWeather";
-import AdditionalInformation from "../components/AdditionalInformation/AdditionalInformation";
+import { IndexCurrentWeather } from "../Contexts/IndexCurrentWeather";
+import CurrentWeather from "../components/HomePage/CurrentWeather/CurrentWeather";
+import WeatherContainer from "../components/HomePage/WeatherContainer/WeatherContainer";
+import AdditionalInformation from "../components/HomePage/AdditionalInformation/AdditionalInformation";
 
 function HomePage() {
-  const weatherData = useLoaderData("API");
-  const [currentWeather, setCurrentWeather] = useState(1);
+  const { weatherData, currentWeather } = useContext(IndexCurrentWeather);
+
   return (
     <div className="mainPage">
       <div className="weather">
         <CurrentWeather
           currentTemperature={weatherData.current.temperature_2m}
-          windSpeed={weatherData.current.wind_speed_10m}
-          opacity={weatherData.current.cloud_cover}
-          snowFall={weatherData.current.snowfall}
           currentWeather={currentWeather}
-          setCurrentWeather={setCurrentWeather}
         />
       </div>
 
@@ -35,6 +29,14 @@ function HomePage() {
           <AdditionalInformation CurrentWeather={currentWeather} />
         </div>
       </div>
+      <footer className="license">
+        <div className="scrolling-text">
+          This work is based on "Mars"
+          (https://sketchfab.com/3d-models/mars-6f9ebc64e6c74068a8412a7dd74dfb96)
+          by JanesBT (https://sketchfab.com/JanesBt) licensed under CC-BY-4.0
+          (http://creativecommons.org/licenses/by/4.0/)
+        </div>
+      </footer>
     </div>
   );
 }

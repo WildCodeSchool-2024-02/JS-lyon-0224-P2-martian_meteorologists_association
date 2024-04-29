@@ -1,0 +1,132 @@
+.globalInformationcontainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.informationContainer {
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 80vw;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: auto;
+  margin-top: 1.5rem;
+  margin-bottom: 8rem;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.65);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.5);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.28);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menulist {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menuicon {
+  padding: 0 1rem;
+}
+
+.menuicon > button {
+  background-color: transparent;
+  width: 60px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menuicon > button > img {
+  width: 60px;
+  cursor: pointer;
+  border-radius: 0.2rem;
+}
+
+.menuicon > button > img:hover {
+  transform: scale(1.1);
+}
+
+.additionalh3 {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 1em;
+}
+
+/* Media Queries */
+@media screen and (min-width: 250px) and (max-width: 360px) {
+  .opacity {
+    width: auto;
+  }
+
+  .sunPositionContainer {
+    width: auto;
+    margin: 1rem 1rem;
+  }
+
+  .informationContainer {
+    margin-bottom: 4rem;
+    width: auto;
+  }
+
+  .menuicon {
+    padding: 0 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 725px) {
+  .menuicon > img {
+    width: 60px;
+  }
+
+  .globalInformationcontainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.6rem;
+  }
+
+  .informationContainer {
+    height: 55vh;
+    display: flex;
+    flex-direction: row;
+    padding: 2vh;
+    margin: 2rem;
+
+    text-align: center;
+  }
+
+  .menulist {
+    flex-direction: column;
+  }
+
+  .textContainer {
+    width: 50vw;
+    margin: auto;
+  }
+
+  .menuicon {
+    padding: 0.5rem 0;
+  }
+
+  .additionalh3 {
+    font-size: 2rem;
+  }
+
+  .additionalp {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 1102px) {
+  .informationContainer {
+    height: 45vh;
+    margin: 3.5rem;
+    margin-bottom: 11rem;
+  }
+}

@@ -1,0 +1,216 @@
+body {
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Shuttle Selection */
+
+.shipContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shipCards {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 4vh;
+}
+
+.shipChoice {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 30vw;
+  height: 18vh;
+  border-radius: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.18);
+}
+
+.shipChoice:hover {
+  background-color: rgba(217, 217, 217, 0.8);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(217, 217, 217, 0.5);
+  width: 85vw;
+  height: auto;
+  padding: 2vh;
+  border-radius: 1.5rem;
+  margin-bottom: 4vh;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.18);
+}
+
+.suttle3d {
+  border: solid black 0.1rem;
+  border-radius: 0.5rem;
+  background-image: url("../../../assets/images/galaxy-pic.jpg");
+}
+
+.canva3d {
+  width: 80vw !important;
+  height: 45vh !important;
+}
+
+.card > img,
+h3,
+p {
+  margin: 1vh;
+}
+
+.card > img {
+  width: 200px;
+}
+
+.selectShuttle {
+  background-color: transparent;
+  border: none;
+}
+
+.selectShuttle > img {
+  width: 100px;
+  cursor: pointer;
+}
+
+/* dates Selection */
+
+.dateChoice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 30vh;
+}
+
+.datesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3vh;
+}
+
+.date {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 1vh;
+  cursor: pointer;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
+}
+
+.date:hover {
+  background-color: rgba(217, 217, 217, 0.8);
+}
+
+/* Reservation button and price */
+
+.reservationButton {
+  margin: 0.5rem 0;
+  min-width: 10vw;
+  padding: 0 1rem;
+  height: 4.5vh;
+  background-color: rgba(217, 217, 217, 0.5);
+  color: white;
+  border: none;
+  border-radius: 1.5rem;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+.reservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.8);
+}
+
+.disReservationButton {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+  cursor: not-allowed;
+}
+
+.disReservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.disReservationMessage {
+  color: transparent;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+}
+
+.validationButton {
+  margin-bottom: 3vh;
+}
+
+/*/////////////Responsive////////////////*/
+
+@media screen and (min-width: 900px) {
+  .shipContainer {
+    flex-direction: row;
+    margin-top: 0.5rem;
+    justify-content: center;
+    height: 73vh;
+  }
+
+  .shipCards {
+    flex-direction: column;
+    margin: 4vw;
+    width: 15vw;
+  }
+
+  .shipChoice {
+    width: 15vw;
+    margin-bottom: 5vh;
+  }
+
+  .card {
+    width: 55vw;
+  }
+
+  .card > p {
+    text-align: center;
+  }
+
+  .canva3d {
+    width: 53vw !important;
+    height: 45vh !important;
+  }
+
+  .dateChoice {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .datesContainer > p {
+    font-size: 1.3rem;
+  }
+
+  .price > p {
+    font-size: 1.3rem;
+  }
+}

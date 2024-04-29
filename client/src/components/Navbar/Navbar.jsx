@@ -23,6 +23,9 @@ export default function NavBar() {
         <li>
           <NavLink to="/reservation">Visit Mars</NavLink>
         </li>
+        <li>
+          <NavLink to="/activities">Activities</NavLink>
+        </li>
       </ul>
     </nav>
   );

@@ -15,34 +15,67 @@
   --container-color: #d9d9d9;
 }
 
-html {
+body {
   background: linear-gradient(#c96c37, #8d3300);
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 h1,
 h2,
 h3,
 h4,
+h5,
 p,
+select,
 a {
   font-family: "victorMono";
   color: white;
   margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.license {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #363636;
+  color: white;
+  padding: 0.02rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  animation: scroll-left 12s linear infinite;
+  /* Adjust timing and direction as needed */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 @media screen and (min-width: 725px) {
   .mainPage {
     display: flex;
     flex-direction: column;
-  }
-
-  .globalInformationcontainer {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .globalInformation {
     width: 80vw;
+  }
+
+  .weather {
+    display: flex;
+    justify-content: center;
   }
 }
