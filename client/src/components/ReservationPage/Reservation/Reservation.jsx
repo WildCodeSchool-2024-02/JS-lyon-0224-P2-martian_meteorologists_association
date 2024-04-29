@@ -3,12 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-import PropTypes from "prop-types";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation({ cardIndex, setCardIndex }) {
+export default function Reservation() {
   const [date, setDate] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [cardIndex, setCardIndex] = useState(0);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -136,7 +136,3 @@ export default function Reservation({ cardIndex, setCardIndex }) {
   );
 }
 
-Reservation.propTypes = {
-  cardIndex: PropTypes.number.isRequired,
-  setCardIndex: PropTypes.func.isRequired,
-};
