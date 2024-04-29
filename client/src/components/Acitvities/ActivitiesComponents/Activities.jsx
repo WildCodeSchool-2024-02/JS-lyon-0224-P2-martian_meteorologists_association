@@ -36,14 +36,14 @@ function ActivitiesChoice({ currentWeather }) {
     setFilteredActivities(filteredArray);
 
     // créer 3 nombres aléatoires pour index du tableau
-    const tbl = [];
-    while (tbl.length < 3) {
+    const arr = [];
+    while (arr.length < 3) {
       const nbRandom = Math.floor(Math.random() * filteredArray.length);
-      if (!tbl.includes(nbRandom)) {
-        tbl.push(nbRandom);
+      if (!arr.includes(nbRandom)) {
+        arr.push(nbRandom);
       }
     }
-    setRandomIndexes(tbl);
+    setRandomIndexes(arr);
   };
 
   return (

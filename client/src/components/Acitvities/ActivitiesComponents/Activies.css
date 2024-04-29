@@ -133,10 +133,14 @@
     align-items: unset;
   }
 
+  .activitiesQuestion,
+  .todoContainer {
+    height: 77vh;
+  }
+
   .activitiesQuestion {
     width: 52vw;
     margin-right: 4vh;
-    height: 77vh;
   }
 
   .questionForm {
@@ -150,7 +154,6 @@
 
   .todoContainer {
     width: 31vw;
-    height: 77vh;
     margin: 0;
   }
 
