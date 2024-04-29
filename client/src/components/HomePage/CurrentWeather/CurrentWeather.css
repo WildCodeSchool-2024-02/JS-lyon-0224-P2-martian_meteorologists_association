@@ -50,7 +50,8 @@ marsPlanet {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin-top: 0.7rem;
+    margin-top: 2.7rem;
+    width: 80vw;
   }
 
   .current_weather {

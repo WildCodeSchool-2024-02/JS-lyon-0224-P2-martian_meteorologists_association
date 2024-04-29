@@ -62,14 +62,15 @@ a {
   .mainPage {
     display: flex;
     flex-direction: column;
-  }
-
-  .globalInformationcontainer {
-    display: flex;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   .globalInformation {
     width: 80vw;
+  }
+
+  .weather {
+    display: flex;
+    justify-content: center;
   }
 }
