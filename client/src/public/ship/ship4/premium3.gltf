@@ -1,0 +1,187 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 28506,
+      "max": [186.22630310058594, 56.6490478515625, 368.8417053222656],
+      "min": [-186.24264526367188, -50.352455139160156, -356.8555603027344],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 342072,
+      "componentType": 5126,
+      "count": 28506,
+      "max": [0.9999968409538269, 1.0, 1.0],
+      "min": [-0.9999964833259583, -1.0, -1.0],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 28506,
+      "max": [0.9984999895095825, 1.0],
+      "min": [0.0, 0.001200019964016974],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 76512,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Wholock (https://sketchfab.com/wholock)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/star-trek-andorian-cruiser-da99bf5fdfd74f858767ccd05d77a181",
+      "title": "Star Trek - Andorian Cruiser"
+    },
+    "generator": "Sketchfab-12.68.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 306048,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 228048,
+      "byteOffset": 306048,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 684144,
+      "byteOffset": 534096,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1218240,
+      "uri": "premium3.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Andorian_battle_cruiser_diffuse_1_2K_1_baseColor.png"
+    },
+    {
+      "uri": "textures/Andorian_battle_cruiser_diffuse_1_2K_1_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Andorian_battle_cruiser_diffuse_1_2K_1_emissive.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveFactor": [1.0, 1.0, 1.0],
+      "emissiveTexture": {
+        "index": 2
+      },
+      "name": "Andorian_battle_cruiser_diffuse_1_2K_1",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Andorian_Cruiser_Andorian_battle_cruiser_diffuse_1_2K_1_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [1],
+      "matrix": [
+        1.0, 0.0, 0.0, 0.0, 0.0, 2.220446049250313e-16, -1.0, 0.0, 0.0, 1.0,
+        2.220446049250313e-16, 0.0, 0.0, 0.0, 0.0, 1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [2],
+      "matrix": [
+        1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, -1.0, 0.0, 0.0, 0.0, 0.0,
+        0.0, 1.0
+      ],
+      "name": "85bb15b074bf461dadda4948e9150d3b.fbx"
+    },
+    {
+      "children": [3],
+      "name": "RootNode"
+    },
+    {
+      "children": [4],
+      "matrix": [
+        -0.9999999999999245, -1.2246467991472253e-16, 3.8941437775530117e-7,
+        0.0, -6.356611634421782e-14, 0.9999999999999867, -1.629206708545435e-7,
+        0.0, -3.89414377755296e-7, -1.629206708545559e-7, -0.9999999999999112,
+        0.0, 0.0, 0.0, 0.0, 1.0
+      ],
+      "name": "Andorian_Cruiser"
+    },
+    {
+      "mesh": 0,
+      "name": "Andorian_Cruiser_Andorian_battle_cruiser_diffuse_1_2K_1_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [0]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}

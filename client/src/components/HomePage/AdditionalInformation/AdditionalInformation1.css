@@ -11,6 +11,9 @@
   margin: auto;
   margin-top: 1.5rem;
   margin-bottom: 8rem;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.65);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.5);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.28);
 }
 
 .menu {
@@ -84,7 +87,8 @@
 
   .globalInformationcontainer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-top: 1.6rem;
   }
 
   .informationContainer {
@@ -93,7 +97,7 @@
     flex-direction: row;
     padding: 2vh;
     margin: 2rem;
-    margin-bottom: 25rem;
+
     text-align: center;
   }
 
