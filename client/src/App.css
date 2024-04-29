@@ -21,13 +21,25 @@ body {
   min-height: 100vh;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
 h1,
 h2,
 h3,
 h4,
 p,
-select,
-a {
+select {
   font-family: "victorMono";
   color: white;
   margin: 0;
@@ -35,7 +47,7 @@ a {
   justify-content: center;
 }
 
-@media screen and (min-width: 725px) {
+@media screen and (max-width: 725px) {
   .mainPage {
     display: flex;
     flex-direction: column;
