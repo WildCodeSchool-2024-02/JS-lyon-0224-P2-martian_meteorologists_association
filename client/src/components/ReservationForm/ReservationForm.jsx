@@ -9,7 +9,7 @@ function ReservationForm() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState("1");
   const [isBtnDisabled, setIsBtnDisabled] = useState(true);
-  const [activeBtn, setActiveBtn] = useState("disValidatebtn");
+  const [activeBtn, setActiveBtn] = useState("disValidateBtn");
   const [activeMsg, setActiveMsg] = useState("validateMsg");
 
   const { date } = useParams();
