@@ -33,7 +33,7 @@
 .activitieschoice {
   margin-top: 2.5vh;
 }
-/* small fix on the select button if you could guys*/
+
 .activitieschoice select {
   font-size: 1rem;
   -webkit-appearance: none;
@@ -49,10 +49,9 @@
     100%;
 }
 
-/* change this part or remove it up to you guys*/
 .activitieschoice select:hover {
   background-color: rgba(217, 217, 217, 0.7);
-  color: var(--primary-color);
+  color: var(--secondary-color);
   border: 1px solid var(--primary-color);
 }
 
