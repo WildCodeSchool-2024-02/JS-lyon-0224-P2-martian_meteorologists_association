@@ -34,8 +34,8 @@ function ReservationForm() {
       allDetails.name !== "" &&
       allDetails.lastName !== "" &&
       allDetails.user_email !== "" &&
-      allDetails.user_email.includes("@") &&
-      allDetails.user_email.includes(".")
+      allDetails.user_email.includes("@") === true &&
+      allDetails.user_email.includes(".") === true
     ) {
       setIsBtnDisabled(false);
       setActiveBtn("validateBtn");

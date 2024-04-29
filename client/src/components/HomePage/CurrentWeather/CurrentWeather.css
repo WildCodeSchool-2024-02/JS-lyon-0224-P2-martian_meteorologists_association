@@ -36,11 +36,6 @@ body {
   justify-content: space-around;
 }
 
-marsPlanet {
-  height: 15vh !important;
-  width: 15vh !important;
-}
-
 .mars {
   padding-top: 2rem;
 }
@@ -57,7 +52,7 @@ marsPlanet {
   .current_weather {
     margin-left: auto;
     width: 50vw;
-    margin-right: 7.4rem !important;
+    margin-right: 7.4rem;
   }
 
   .currentWeather_box {
@@ -68,15 +63,10 @@ marsPlanet {
     margin: 0 auto;
     padding-top: 0.1rem;
   }
-
-  marsPlanet {
-    height: 22vh !important;
-    width: 22vh !important;
-  }
 }
 
 @media screen and (min-width: 900px) {
   .current_weather {
-    margin-right: 8.3rem !important;
+    margin-right: 8.3rem;
   }
 }
