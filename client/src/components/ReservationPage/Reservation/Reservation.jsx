@@ -107,7 +107,7 @@ export default function Reservation() {
               </Suspense>
             </Canvas>
           </div>
-          <h2>{ShuttleCards[cardIndex].name}</h2>
+          <h3>{ShuttleCards[cardIndex].name}</h3>
           <p>{ShuttleCards[cardIndex].description}</p>
         </div>
       </div>
