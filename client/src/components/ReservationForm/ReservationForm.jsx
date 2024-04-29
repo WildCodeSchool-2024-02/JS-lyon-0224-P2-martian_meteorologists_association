@@ -5,12 +5,12 @@ import "./ReservationForm.css";
 import ShuttleCards from "../../BDD/ShuttleCards";
 import PopUp from "./PopUp";
 
-export default function ReservationForm() {
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+function ReservationForm() {
   const { id } = useParams();
   const [quantity, setQuantity] = useState("1");
+  const [isBtnDisabled, setIsBtnDisabled] = useState(true);
+  const [activeBtn, setActiveBtn] = useState("disValidateBtn");
+  const [activeMsg, setActiveMsg] = useState("validateMsg");
 
   const { date } = useParams();
 
@@ -23,6 +23,27 @@ export default function ReservationForm() {
     e.preventDefault();
   };
 
+  const [allDetails, setAllDetails] = useState({
+    name: "",
+    lastName: "",
+    user_email: "",
+  });
+
+  const handleAllDetails = (e) => {
+    setAllDetails({ ...allDetails, [e.target.name]: e.target.value });
+    if (
+      allDetails.name !== "" &&
+      allDetails.lastName !== "" &&
+      allDetails.user_email !== "" &&
+      allDetails.user_email.includes("@") &&
+      allDetails.user_email.includes(".")
+    ) {
+      setIsBtnDisabled(false);
+      setActiveBtn("validateBtn");
+      setActiveMsg("disValidateMsg");
+    }
+  };
+
   return (
     <div>
       <h1>Reservation form</h1>
@@ -32,8 +53,8 @@ export default function ReservationForm() {
             <label>
               Name:
               <input
-                onChange={(e) => setName(e.target.value)}
-                value={name}
+                onChange={handleAllDetails}
+                value={allDetails.name}
                 type="text"
                 name="name"
               />
@@ -41,17 +62,17 @@ export default function ReservationForm() {
             <label>
               Lastname:
               <input
-                onChange={(e) => setLastName(e.target.value)}
-                value={lastName}
+                onChange={handleAllDetails}
+                value={allDetails.lastName}
                 type="text"
-                name="surName"
+                name="lastName"
               />
             </label>
             <label>
               Email:
               <input
-                onChange={(e) => setEmail(e.target.value)}
-                value={email}
+                onChange={handleAllDetails}
+                value={allDetails.email}
                 type="email"
                 name="user_email"
               />
@@ -78,8 +99,16 @@ export default function ReservationForm() {
             <p>{date}</p>
           </div>
         </div>
-        <PopUp onClick={inputDetails} name={name} />
+        <PopUp
+          onClick={inputDetails}
+          name={allDetails.name}
+          isBtnDisabled={isBtnDisabled}
+          activeBtn={activeBtn}
+          activeMsg={activeMsg}
+        />
       </div>
     </div>
   );
 }
+
+export default ReservationForm;

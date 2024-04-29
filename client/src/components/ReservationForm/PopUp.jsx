@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import "./PopUp.css";
 
-export default function PopUp({ name }) {
+export default function PopUp({ name, isBtnDisabled, activeBtn, activeMsg }) {
   const [popUp, setPopUp] = useState(false);
 
   const togglePopUp = () => {
@@ -21,10 +21,17 @@ export default function PopUp({ name }) {
 
   return (
     <div>
-      <button onClick={togglePopUp} type="button" className="validateBtn">
-        Validate
-      </button>
-
+      <div className="validBtnDiv">
+        <button
+          onClick={togglePopUp}
+          disabled={isBtnDisabled}
+          type="button"
+          className={`validateBtn ${activeBtn}`}
+        >
+          Validate
+        </button>
+        <p className={`validateMsg ${activeMsg}`}>Please fill the form!</p>
+      </div>
       {popUp && (
         <div className="modal">
           <button type="button" className="overlay">
@@ -42,4 +49,7 @@ export default function PopUp({ name }) {
 
 PopUp.propTypes = {
   name: PropTypes.string.isRequired,
+  isBtnDisabled: PropTypes.bool.isRequired,
+  activeBtn: PropTypes.string.isRequired,
+  activeMsg: PropTypes.string.isRequired,
 };

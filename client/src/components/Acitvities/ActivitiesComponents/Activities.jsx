@@ -89,7 +89,7 @@ function ActivitiesChoice({ currentWeather }) {
               className="activitiesValidation"
               onClick={handleClick}
             >
-              <p>Validate</p>
+              Validate
             </button>
           </form>
         </div>
@@ -97,15 +97,15 @@ function ActivitiesChoice({ currentWeather }) {
         <div className={`todoContainer ${visibility}`}>
           <h2>TO DO</h2>
           <article className="todoArticle">
-            <h4>{filteredActivities[randomIndexes[0]].activity}</h4>
+            <h5>{filteredActivities[randomIndexes[0]].activity}</h5>
             <p>{filteredActivities[randomIndexes[0]].description}</p>
           </article>
           <article className="todoArticle">
-            <h4>{filteredActivities[randomIndexes[1]].activity}</h4>
+            <h5>{filteredActivities[randomIndexes[1]].activity}</h5>
             <p>{filteredActivities[randomIndexes[1]].description}</p>
           </article>
           <article className="todoArticle">
-            <h4>{filteredActivities[randomIndexes[2]].activity}</h4>
+            <h5>{filteredActivities[randomIndexes[2]].activity}</h5>
             <p>{filteredActivities[randomIndexes[2]].description}</p>
           </article>
         </div>
