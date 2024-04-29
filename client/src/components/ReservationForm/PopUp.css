@@ -4,20 +4,6 @@
   align-items: center;
 }
 
-/* .validateBtn {
-  margin: 1rem 0;
-  background-color: rgba(217, 217, 217, 0.5);
-  color: white;
-  width: 12vw;
-  height: 5vh;
-  border: none;
-  border-radius: 1.5rem;
-  font-weight: bold;s
-  font-size: large;
-  font-family: "victorMono";
-  cursor: pointer;
-} */
-
 .validateBtn {
   margin: 1rem 0;
   background-color: rgba(217, 217, 217, 0.5);

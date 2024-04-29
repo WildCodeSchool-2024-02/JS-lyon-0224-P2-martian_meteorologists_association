@@ -25,6 +25,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 select,
 a {
@@ -34,6 +35,7 @@ a {
   display: flex;
   justify-content: center;
 }
+
 .license {
   left: 0;
   bottom: 0;
@@ -44,15 +46,18 @@ a {
   text-align: center;
   overflow: hidden;
 }
+
 .scrolling-text {
   white-space: nowrap;
-  animation: scroll-left 12s linear infinite; /* Adjust timing and direction as needed */
+  animation: scroll-left 12s linear infinite;
+  /* Adjust timing and direction as needed */
 }
 
 @keyframes scroll-left {
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translateX(-100%);
   }
