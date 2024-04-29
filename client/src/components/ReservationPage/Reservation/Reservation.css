@@ -69,7 +69,7 @@ h1 {
 }
 
 .card > img,
-h2,
+h3,
 p {
   margin: 1vh;
 }
@@ -191,12 +191,7 @@ p {
     width: 55vw;
   }
 
-  .card > h2 {
-    font-size: 2rem;
-  }
-
   .card > p {
-    font-size: 1.3rem;
     text-align: center;
   }
 
