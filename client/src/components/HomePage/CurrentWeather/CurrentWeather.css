@@ -24,6 +24,9 @@ body {
   margin: auto;
   display: flex;
   justify-content: space-evenly;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
 }
 
 .currentWeather_box {
@@ -47,12 +50,14 @@ marsPlanet {
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
-    margin-top: 0;
+    margin-top: 2.7rem;
+    width: 80vw;
   }
 
   .current_weather {
     margin-left: auto;
     width: 50vw;
+    margin-right: 7.4rem !important;
   }
 
   .currentWeather_box {
@@ -61,6 +66,7 @@ marsPlanet {
 
   .mars {
     margin: 0 auto;
+    padding-top: 0.1rem;
   }
 
   marsPlanet {
@@ -71,6 +77,6 @@ marsPlanet {
 
 @media screen and (min-width: 900px) {
   .current_weather {
-    margin-right: auto;
+    margin-right: 8.3rem !important;
   }
 }

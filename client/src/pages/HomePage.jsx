@@ -8,10 +8,6 @@ import AdditionalInformation from "../components/HomePage/AdditionalInformation/
 function HomePage() {
   const { weatherData, currentWeather } = useContext(IndexCurrentWeather);
 
-  if (!weatherData) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className="mainPage">
       <div className="weather">
@@ -33,6 +29,14 @@ function HomePage() {
           <AdditionalInformation CurrentWeather={currentWeather} />
         </div>
       </div>
+      <footer className="license">
+        <div className="scrolling-text">
+          This work is based on "Mars"
+          (https://sketchfab.com/3d-models/mars-6f9ebc64e6c74068a8412a7dd74dfb96)
+          by JanesBT (https://sketchfab.com/JanesBt) licensed under CC-BY-4.0
+          (http://creativecommons.org/licenses/by/4.0/)
+        </div>
+      </footer>
     </div>
   );
 }

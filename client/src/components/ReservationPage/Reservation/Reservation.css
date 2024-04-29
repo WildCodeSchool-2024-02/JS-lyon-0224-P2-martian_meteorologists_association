@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 h1 {
   text-align: center;
 }
@@ -28,6 +32,9 @@ h1 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.18);
 }
 
 .shipChoice:hover {
@@ -45,6 +52,15 @@ h1 {
   margin-bottom: 4vh;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 3px rgba(91, 34, 1, 0.18);
+}
+
+.suttle3d {
+  border: solid black 0.1rem;
+  border-radius: 0.5rem;
+  background-image: url("../../../assets/images/galaxy-pic.jpg");
 }
 
 .canva3d {
@@ -53,7 +69,7 @@ h1 {
 }
 
 .card > img,
-h2,
+h3,
 p {
   margin: 1vh;
 }
@@ -97,37 +113,48 @@ p {
   border-radius: 1.5rem;
   padding: 1vh;
   cursor: pointer;
+  box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.59);
+  -webkit-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.48);
+  -moz-box-shadow: 0px 0px 26px 5px rgba(91, 34, 1, 0.18);
 }
 
 .date:hover {
   background-color: rgba(217, 217, 217, 0.8);
 }
 
-.validationButton {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Reservation button and price */
 
 .reservationButton {
+  margin: 0.5rem 0;
+  min-width: 10vw;
+  padding: 0 1rem;
+  height: 4.5vh;
   background-color: rgba(217, 217, 217, 0.5);
   color: white;
   border: none;
   border-radius: 1.5rem;
   font-weight: bold;
   font-size: large;
+  cursor: pointer;
 }
 
-.reservationButton > a {
-  text-decoration: none;
-  border-radius: 1.5rem;
+.reservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.8);
 }
 
-.reservationButton > a:hover {
+.disReservationButton {
   background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+  cursor: not-allowed;
+}
+
+.disReservationButton:hover {
+  background-color: rgba(217, 217, 217, 0.5);
+  color: rgba(217, 217, 217, 0.5);
+}
+
+.disReservationMessage {
+  color: transparent;
 }
 
 .price {
@@ -144,6 +171,9 @@ p {
 @media screen and (min-width: 900px) {
   .shipContainer {
     flex-direction: row;
+    margin-top: 0.5rem;
+    justify-content: center;
+    height: 73vh;
   }
 
   .shipCards {
@@ -161,12 +191,7 @@ p {
     width: 55vw;
   }
 
-  .card > h2 {
-    font-size: 2rem;
-  }
-
   .card > p {
-    font-size: 1.3rem;
     text-align: center;
   }
 
@@ -174,9 +199,10 @@ p {
     width: 53vw !important;
     height: 45vh !important;
   }
+
   .dateChoice {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
   }
 

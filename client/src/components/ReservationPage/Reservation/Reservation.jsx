@@ -3,17 +3,24 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-import PropTypes from "prop-types";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation({ cardIndex, setCardIndex }) {
+export default function Reservation() {
   const [date, setDate] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [cardIndex, setCardIndex] = useState(0);
+  const [reservationBtn, setReservationBtn] = useState("disReservationButton");
+  const [activeMsg, setActiveMsg] = useState("reservationMsg");
 
   const handleChange = (event) => {
     event.preventDefault();
-    setDate(event.target.value);
-    setIsButtonDisabled(!isButtonDisabled);
+    const selectedDate = event.target.value;
+    setDate(selectedDate);
+    if (selectedDate !== 0) {
+      setIsButtonDisabled(false);
+      setReservationBtn("reservationButton");
+      setActiveMsg("disReservationMessage");
+    }
   };
 
   const handleButtonClick = () => {
@@ -32,7 +39,7 @@ export default function Reservation({ cardIndex, setCardIndex }) {
   }).format(ShuttleCards[cardIndex].price);
 
   return (
-    <div>
+    <div className="resrvation_page">
       <h1>Choose your shuttle</h1>
       <div className="shipContainer">
         <div className="shipCards">
@@ -100,7 +107,7 @@ export default function Reservation({ cardIndex, setCardIndex }) {
               </Suspense>
             </Canvas>
           </div>
-          <h2>{ShuttleCards[cardIndex].name}</h2>
+          <h3>{ShuttleCards[cardIndex].name}</h3>
           <p>{ShuttleCards[cardIndex].description}</p>
         </div>
       </div>
@@ -121,22 +128,37 @@ export default function Reservation({ cardIndex, setCardIndex }) {
           <div className="price">
             <p>price : {amount} </p>
           </div>
-
-          <button
-            onClick={handleButtonClick}
-            type="button"
-            disabled={isButtonDisabled}
-            className="reservationButton"
-          >
-            <p>Validate</p>
-          </button>
+          <div className="validBtnDiv">
+            <button
+              onClick={handleButtonClick}
+              type="button"
+              disabled={isButtonDisabled}
+              className={`reservationButton ${reservationBtn}`}
+            >
+              Validate
+            </button>
+            <p className={`reservationMsg ${activeMsg}`}>
+              Please choose a date!
+            </p>
+          </div>
         </div>
       </div>
+      <footer className="license">
+        <div className="scrolling-text">
+          credits goes to: This work is based on "UFO "Rick and Morty""{" "}
+          (https://sketchfab.com/3d-models/ufo-rick-and-morty-fe440d6641d2426cb69beefe7f3ec161)
+          by glebchik20 (https://sketchfab.com/glebchik20) licensed under
+          CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) || This work
+          is based on "Space Shuttle"
+          (https://sketchfab.com/3d-models/space-shuttle-ff4b00b7ebb24fdd98fb96b08f2c43c9)
+          by Microsoft (https://sketchfab.com/microsoft) licensed under
+          CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) || This work
+          is based on "Star Trek - DSC Enterprise"
+          (https://sketchfab.com/3d-models/star-trek-dsc-enterprise-98cdebaa7fae4752bcaa5a35453d224c)
+          by Wholock (https://sketchfab.com/wholock) licensed under CC-BY-4.0
+          (http://creativecommons.org/licenses/by/4.0/)
+        </div>
+      </footer>
     </div>
   );
 }
-
-Reservation.propTypes = {
-  cardIndex: PropTypes.number.isRequired,
-  setCardIndex: PropTypes.func.isRequired,
-};
