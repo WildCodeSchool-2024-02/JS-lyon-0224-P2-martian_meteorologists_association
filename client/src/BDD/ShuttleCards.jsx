@@ -1,12 +1,12 @@
 import Pedalo from "../components/ReservationPage/Reservation/Pedalo";
 import Classic from "../components/ReservationPage/Reservation/Classic";
-import Premuim from "../components/ReservationPage/Reservation/Premium";
+import Premium from "../components/ReservationPage/Reservation/Premium";
 
 const ShuttleCards = [
   {
     name: "Premium Express",
     image: "/src/assets/images/Premium_shuttle.png",
-    ship: <Premuim />,
+    ship: <Premium />,
     description:
       "Indulge in six months of travel with the luxury of included spa treatments and room service, ensuring your relaxation and enjoyment throughout.",
     price: 500000000,

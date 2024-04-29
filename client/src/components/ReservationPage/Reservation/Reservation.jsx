@@ -3,12 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 
 import "./Reservation.css";
-import PropTypes from "prop-types";
 import ShuttleCards from "../../../BDD/ShuttleCards";
 
-export default function Reservation({ cardIndex, setCardIndex }) {
+export default function Reservation() {
   const [date, setDate] = useState(0);
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
+  const [cardIndex, setCardIndex] = useState(0);
 
   const handleChange = (event) => {
     event.preventDefault();
@@ -142,9 +142,9 @@ export default function Reservation({ cardIndex, setCardIndex }) {
           (https://sketchfab.com/3d-models/space-shuttle-ff4b00b7ebb24fdd98fb96b08f2c43c9)
           by Microsoft (https://sketchfab.com/microsoft) licensed under
           CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/) || This work
-          is based on "Colony Tactical Ship"
-          (https://sketchfab.com/3d-models/colony-tactical-ship-050dae751a404f3087aac9241958e2b1)
-          by Rakshaan (https://sketchfab.com/rakshaan) licensed under CC-BY-4.0
+          is based on "Star Trek - DSC Enterprise"
+          (https://sketchfab.com/3d-models/star-trek-dsc-enterprise-98cdebaa7fae4752bcaa5a35453d224c)
+          by Wholock (https://sketchfab.com/wholock) licensed under CC-BY-4.0
           (http://creativecommons.org/licenses/by/4.0/)
         </div>
       </footer>
@@ -152,7 +152,3 @@ export default function Reservation({ cardIndex, setCardIndex }) {
   );
 }
 
-Reservation.propTypes = {
-  cardIndex: PropTypes.number.isRequired,
-  setCardIndex: PropTypes.func.isRequired,
-};
