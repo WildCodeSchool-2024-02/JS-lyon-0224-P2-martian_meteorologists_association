@@ -11,8 +11,8 @@ export default function Navbar() {
 
   return (
     <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"} `} >
-      <button type="button"className="navbar_burger" onClick={handleShowlinks}>
-        <span className="burger-bar">merde</span>
+      <button type="button"className="menu-button" onClick={handleShowlinks}>
+        <span className="burger-bar">T</span>
       </button>
 
       <ul className="navbar_links">
