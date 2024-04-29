@@ -29,9 +29,9 @@ function ActivitiesChoice({ currentWeather }) {
     // Filtrer le tableau Activities en fonction des réponses
     const filteredArray = Activities.filter(
       (item) =>
-        item.category.includes(feelValue) &&
-        item.category.includes(sportValue) &&
-        item.category.includes(WeatherLogo[currentWeather].name)
+        item.category.includes(feelValue) === true &&
+        item.category.includes(sportValue) === true &&
+        item.category.includes(WeatherLogo[currentWeather].name) === true
     );
     setFilteredActivities(filteredArray);
 
@@ -39,7 +39,7 @@ function ActivitiesChoice({ currentWeather }) {
     const arr = [];
     while (arr.length < 3) {
       const nbRandom = Math.floor(Math.random() * filteredArray.length);
-      if (!arr.includes(nbRandom)) {
+      if (!arr.includes(nbRandom) === true) {
         arr.push(nbRandom);
       }
     }
