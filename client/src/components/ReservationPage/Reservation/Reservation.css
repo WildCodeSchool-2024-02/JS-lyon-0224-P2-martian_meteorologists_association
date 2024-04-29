@@ -157,13 +157,9 @@ p {
   color: transparent;
 }
 
-/* the sticky position doesn't work for some reason help me on  this */
 .price {
-  position: sticky;
-  bottom: 0;
   display: flex;
   align-items: center;
-  width: 100%;
 }
 
 .validationButton {
@@ -177,6 +173,7 @@ p {
     flex-direction: row;
     margin-top: 0.5rem;
     justify-content: center;
+    height: 73vh;
   }
 
   .shipCards {
@@ -210,7 +207,7 @@ p {
 
   .dateChoice {
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
   }
 
